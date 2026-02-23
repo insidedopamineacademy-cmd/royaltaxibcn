@@ -1,6 +1,11 @@
 import nodemailer from "nodemailer";
 import {NextRequest, NextResponse} from "next/server";
 
+function parseBool(value: string | undefined) {
+  if (!value) return false;
+  return ["1", "true", "yes", "on"].includes(value.trim().toLowerCase());
+}
+
 type QuotePayload = {
   name?: string;
   phone?: string;
@@ -110,27 +115,39 @@ export async function POST(request: NextRequest) {
   }
 
   const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = Number(process.env.SMTP_PORT);
+  const smtpPortRaw = process.env.SMTP_PORT;
+  const smtpPort = smtpPortRaw ? Number(smtpPortRaw) : NaN;
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
   const quoteTo = process.env.QUOTE_TO;
   const quoteFrom = process.env.QUOTE_FROM;
+  const smtpSecureEnv = parseBool(process.env.SMTP_SECURE);
 
-  if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !quoteTo || !quoteFrom) {
+  // Fallbacks + sanity checks
+  const resolvedPort = Number.isFinite(smtpPort) ? smtpPort : 587;
+  const resolvedSecure = smtpSecureEnv || resolvedPort === 465;
+
+  if (!smtpHost || !smtpUser || !smtpPass || !quoteTo || !quoteFrom) {
     return NextResponse.json({ok: false, error: "smtp_not_configured"}, {status: 500});
   }
 
   const transporter = nodemailer.createTransport({
     host: smtpHost,
-    port: smtpPort,
-    secure: smtpPort === 465,
-    requireTLS: smtpPort === 587,
+    port: resolvedPort,
+    // 465 = implicit TLS, 587 = STARTTLS
+    secure: resolvedSecure,
+    requireTLS: !resolvedSecure, // enforce STARTTLS when not using implicit TLS
     connectionTimeout: 10_000,
     greetingTimeout: 10_000,
     socketTimeout: 15_000,
     auth: {
       user: smtpUser,
       pass: smtpPass,
+    },
+    tls: {
+      // Helps some providers on serverless platforms
+      servername: smtpHost,
+      minVersion: "TLSv1.2",
     },
   });
 
@@ -160,6 +177,9 @@ export async function POST(request: NextRequest) {
     .join("\n");
 
   try {
+    // Quick handshake test (useful for debugging in Vercel logs)
+    await transporter.verify();
+
     await transporter.sendMail({
       from: `Royal Taxi BCN <${quoteFrom}>`,
       to: quoteTo,
@@ -175,7 +195,17 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ok: true}, {status: 200});
-  } catch {
+  } catch (err) {
+    // Surface a safer error code to the client, and log the real details for you.
+    const e = err as { code?: string; message?: string };
+    console.error("SMTP_ERROR", {
+      code: e?.code,
+      message: e?.message,
+      host: smtpHost,
+      port: resolvedPort,
+      secure: resolvedSecure,
+    });
+
     return NextResponse.json({ok: false, error: "smtp_error"}, {status: 500});
   }
 }
