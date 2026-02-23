@@ -57,12 +57,12 @@ export default async function WhyUsPage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)] text-white" containerClassName="max-w-7xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {features.map((feature) => (
-            <Card key={feature.title}>
-              <h2 className="text-xl">{feature.title}</h2>
-              <p className="mt-3 max-w-prose text-sm leading-7">{feature.description}</p>
+            <Card key={feature.title} className="bg-white/5 border border-white/10 text-white shadow-none">
+              <h2 className="text-xl text-white">{feature.title}</h2>
+              <p className="mt-3 max-w-prose text-sm leading-7 text-white/90">{feature.description}</p>
             </Card>
           ))}
         </div>

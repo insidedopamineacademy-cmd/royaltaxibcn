@@ -31,19 +31,19 @@ export default async function GetQuotePage({params}: PageProps) {
 
   return (
     <>
-      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)] text-white" containerClassName="max-w-7xl">
         <PageHeader title={t("title")} description={t("intro")} />
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-4xl">
+      <SectionContainer className="bg-[var(--color-surface)] pt-12 md:pt-16" containerClassName="max-w-4xl">
         <QuoteForm locale={locale} />
 
-        <div className="mt-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-4">
-          <p className="text-sm font-medium text-[var(--color-navy)]">{t("reassurance")}</p>
+        <div className="mt-10 rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-4 shadow-soft">
+          <p className="text-sm font-medium text-[var(--color-ink)]">{t("reassurance")}</p>
           <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-[var(--color-muted)]">
-            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.fast")}</span>
-            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.licensed")}</span>
-            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.airport")}</span>
+            <span className="rounded-full border border-[var(--color-border)] bg-white/60 px-3 py-1 font-medium">✓ {t("chips.fast")}</span>
+            <span className="rounded-full border border-[var(--color-border)] bg-white/60 px-3 py-1 font-medium">✓ {t("chips.licensed")}</span>
+            <span className="rounded-full border border-[var(--color-border)] bg-white/60 px-3 py-1 font-medium">✓ {t("chips.airport")}</span>
           </div>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="h-10 px-4 text-xs">
@@ -53,6 +53,9 @@ export default async function GetQuotePage({params}: PageProps) {
               {t("callNow")}
             </Button>
           </div>
+          <p className="mt-3 text-xs text-[var(--color-muted)]">
+            ✓ Licensed Barcelona taxi service • ✓ Secure booking • ✓ 24/7 availability
+          </p>
         </div>
       </SectionContainer>
     </>

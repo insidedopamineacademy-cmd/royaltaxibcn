@@ -58,8 +58,7 @@ export default async function HomePage({params}: PageProps) {
   return (
     <>
       <SectionContainer className="bg-white" containerClassName="max-w-7xl">
-        <div className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)] p-7 shadow-soft md:p-10">
-          <span className="inline-flex rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-navy)]">
+          <span className="inline-flex rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-navy)] shadow-none">
             {t("heroBadge")}
           </span>
 
@@ -95,7 +94,6 @@ export default async function HomePage({params}: PageProps) {
               </div>
             }
           />
-        </div>
       </SectionContainer>
 
       <SectionContainer className="bg-[var(--color-surface)]" id="services" containerClassName="max-w-7xl">
@@ -131,7 +129,7 @@ export default async function HomePage({params}: PageProps) {
             {t("fleet.more")}
           </Link>
         </div>
-        <p className="mt-3 max-w-prose text-sm leading-7 text-gray-300">{t("fleet.darkSectionIntro")}</p>
+        <p className="mt-3 max-w-prose text-sm leading-7 text-white/90">{t("fleet.darkSectionIntro")}</p>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {fleet.map((item, index) => (
             <article
@@ -150,7 +148,7 @@ export default async function HomePage({params}: PageProps) {
               </div>
               <div className="p-6">
                 <h3 className="text-lg text-white">{item.title}</h3>
-                <p className="mt-3 max-w-prose text-sm leading-7 text-gray-300">{item.description}</p>
+                <p className="mt-3 max-w-prose text-sm leading-7 text-white/90">{item.description}</p>
                 <Button
                   href={whatsappHref}
                   target="_blank"
@@ -191,7 +189,7 @@ export default async function HomePage({params}: PageProps) {
 
       <SectionContainer className="bg-[var(--color-ink)]" id="contact" containerClassName="max-w-5xl text-center">
         <h2 className="text-2xl text-white md:text-3xl">{t("finalTitle")}</h2>
-        <p className="mx-auto mt-4 max-w-prose leading-7 text-gray-300">{t("finalSupport")}</p>
+        <p className="mx-auto mt-4 max-w-prose leading-7 text-white/90">{t("finalSupport")}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button href={whatsappHref} variant="whatsapp" target="_blank" rel="noopener noreferrer" className="h-12 px-8">
             {t("finalButton")}

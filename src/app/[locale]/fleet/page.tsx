@@ -67,10 +67,10 @@ export default async function FleetPage({params}: PageProps) {
         <PageHeader title={t("title")} description={t("intro")} />
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)] text-white" containerClassName="max-w-7xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
           {vehicles.map((vehicle, index) => (
-            <Card key={vehicle.title} className="p-0">
+            <Card key={vehicle.title} className="p-0 bg-white/5 border border-white/10 text-white shadow-none overflow-hidden">
               <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
                 <Image
                   src={vehicle.image}
@@ -82,16 +82,16 @@ export default async function FleetPage({params}: PageProps) {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg">{vehicle.title}</h3>
-                <div className="mt-3 flex flex-wrap gap-2 text-xs font-medium text-[var(--color-navy)]">
-                  <span className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1">
+                <h3 className="text-lg text-white">{vehicle.title}</h3>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs font-medium text-white/80">
+                  <span className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1">
                     {vehicle.capacity}
                   </span>
-                  <span className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1">
+                  <span className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1">
                     {vehicle.luggage}
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-7">{vehicle.description}</p>
+                <p className="mt-3 text-sm leading-7 text-white/90">{vehicle.description}</p>
                 <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="gold" className="mt-6 w-full">
                   {t("bookVehicle")}
                 </Button>

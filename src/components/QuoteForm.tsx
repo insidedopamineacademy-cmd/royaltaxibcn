@@ -146,9 +146,9 @@ export function QuoteForm({locale}: QuoteFormProps) {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-soft sm:p-10"
+      className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-soft sm:p-10 overflow-hidden"
     >
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-2 min-w-0">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("name")}
@@ -161,7 +161,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.name}
             onChange={(event) => setForm((prev) => ({...prev, name: event.target.value}))}
             placeholder={formT("namePlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -177,7 +177,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.phone}
             onChange={(event) => setForm((prev) => ({...prev, phone: event.target.value}))}
             placeholder={formT("phonePlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -193,7 +193,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.email}
             onChange={(event) => setForm((prev) => ({...prev, email: event.target.value}))}
             placeholder={formT("emailPlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -209,7 +209,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.passengers}
             onChange={(event) => setForm((prev) => ({...prev, passengers: event.target.value}))}
             placeholder={formT("passengersPlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -225,7 +225,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.pickup}
             onChange={(event) => setForm((prev) => ({...prev, pickup: event.target.value}))}
             placeholder={formT("pickupPlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -241,7 +241,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.dropoff}
             onChange={(event) => setForm((prev) => ({...prev, dropoff: event.target.value}))}
             placeholder={formT("dropoffPlaceholder")}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -255,7 +255,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             type="date"
             value={form.date}
             onChange={(event) => setForm((prev) => ({...prev, date: event.target.value}))}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -269,7 +269,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             type="time"
             value={form.time}
             onChange={(event) => setForm((prev) => ({...prev, time: event.target.value}))}
-            className="h-11 w-full rounded-xl border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
 
@@ -284,7 +284,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
             value={form.message}
             onChange={(event) => setForm((prev) => ({...prev, message: event.target.value}))}
             placeholder={formT("messagePlaceholder")}
-            className="w-full rounded-xl border border-[var(--color-border)] bg-white px-3 py-2.5 text-sm text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            className="w-full rounded-xl border border-[var(--color-border)] bg-white px-3 py-2.5 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
           />
         </div>
       </div>

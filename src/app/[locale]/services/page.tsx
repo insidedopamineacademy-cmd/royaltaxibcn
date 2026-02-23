@@ -78,15 +78,15 @@ export default async function ServicesPage({params}: PageProps) {
         <PageHeader title={t("title")} description={t("intro")} />
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)] text-white" containerClassName="max-w-7xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title}>
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-surface)] text-[var(--color-navy)]">
+            <Card key={service.title} className="bg-white/5 border border-white/10 text-white shadow-none">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white">
                 {service.icon}
               </span>
               <h2 className="mt-4 text-xl">{service.title}</h2>
-              <p className="mt-3 max-w-prose leading-7">{service.description}</p>
+              <p className="mt-3 max-w-prose leading-7 text-white/90">{service.description}</p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="whatsapp">
                   {t("bookNow")}
@@ -126,13 +126,13 @@ export default async function ServicesPage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)] text-white" containerClassName="max-w-7xl">
         <h3 className="text-xl">{t("howItWorks.title")}</h3>
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
           {steps.map((step) => (
-            <Card key={step.title}>
+            <Card key={step.title} className="bg-white/5 border border-white/10 text-white shadow-none">
               <h4 className="text-lg">{step.title}</h4>
-              <p className="mt-3 text-sm leading-7">{step.desc}</p>
+              <p className="mt-3 text-sm leading-7 text-white/90">{step.desc}</p>
             </Card>
           ))}
         </div>
