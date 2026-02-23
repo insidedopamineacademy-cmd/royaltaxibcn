@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg-dark: #0f172a;
-  --color-gold: #fbbf24;
-  --color-cta-blue: #2563eb;
+  --color-ink: #16171a;
+  --color-surface: #f6f4ef;
+  --color-card: #ffffff;
+  --color-border: #e5e1d7;
+  --color-muted: #5f626a;
+  --color-gold: #c6a85a;
+  --color-navy: #151a22;
+  --color-navy-strong: #0f141b;
   --color-whatsapp: #25d366;
-  --color-ink: #0d0d0d;
-  --color-surface: #f8f7f4;
-  --color-white: #ffffff;
-  --color-border: #e5e7eb;
-  --color-muted: #9ca3af;
 }
 
 @theme inline {
@@ -25,6 +25,7 @@ body {
   background: var(--color-surface);
   color: var(--color-ink);
   font-family: var(--font-sans), sans-serif;
+  line-height: 1.6;
 }
 
 h1,
@@ -34,6 +35,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif), serif;
+  line-height: 1.2;
+  color: var(--color-navy);
 }
 
 a {
@@ -41,16 +44,10 @@ a {
   text-decoration: none;
 }
 
-.pb-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.25rem);
+p {
+  color: var(--color-muted);
 }
 
-@keyframes floaty {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.25rem);
 }

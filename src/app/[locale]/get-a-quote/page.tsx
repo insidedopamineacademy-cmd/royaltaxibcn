@@ -1,9 +1,9 @@
 import type {Metadata} from "next";
 import {getTranslations, setRequestLocale} from "next-intl/server";
 import {Button} from "@/components/Button";
-import {Container} from "@/components/Container";
+import {PageHeader} from "@/components/PageHeader";
 import {QuoteForm} from "@/components/QuoteForm";
-import {Section} from "@/components/Section";
+import {SectionContainer} from "@/components/SectionContainer";
 
 type PageProps = {
   params: {locale: string};
@@ -30,29 +30,31 @@ export default async function GetQuotePage({params}: PageProps) {
       : "https://wa.me/34617629115?text=Hello%20I%20would%20like%20a%20quote%20for%20a%20taxi%20in%20Barcelona.";
 
   return (
-    <Section className="sm:py-20">
-      <Container>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl">{t("title")}</h1>
-          <p className="mt-4 max-w-3xl text-[var(--color-muted)]">{t("intro")}</p>
+    <>
+      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
+        <PageHeader title={t("title")} description={t("intro")} />
+      </SectionContainer>
 
-          <div className="mt-8">
-            <QuoteForm locale={locale} />
+      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-4xl">
+        <QuoteForm locale={locale} />
+
+        <div className="mt-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-4">
+          <p className="text-sm font-medium text-[var(--color-navy)]">{t("reassurance")}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-[var(--color-muted)]">
+            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.fast")}</span>
+            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.licensed")}</span>
+            <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">✓ {t("chips.airport")}</span>
           </div>
-
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[var(--color-border)] bg-white px-5 py-4">
-            <p className="text-sm text-[var(--color-muted)]">{t("reassurance")}</p>
-            <div className="flex flex-wrap gap-3">
-              <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" className="h-10 px-4 text-xs">
-                {t("whatsapp")}
-              </Button>
-              <Button href="tel:+34617629115" variant="outline" className="h-10 px-4 text-xs">
-                {t("callNow")}
-              </Button>
-            </div>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="whatsapp" className="h-10 px-4 text-xs">
+              {t("whatsapp")}
+            </Button>
+            <Button href="tel:+34617629115" variant="secondary" className="h-10 px-4 text-xs">
+              {t("callNow")}
+            </Button>
           </div>
         </div>
-      </Container>
-    </Section>
+      </SectionContainer>
+    </>
   );
 }

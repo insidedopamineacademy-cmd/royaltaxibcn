@@ -4,12 +4,15 @@
     "description": "Premium Barcelona taxi service for airport transfers, city rides and executive travel."
   },
   "header": {
+    "home": "Home",
     "services": "Services",
     "fleet": "Fleet",
-    "quote": "Get a Quote",
+    "quote": "Request Quote",
     "why": "Why Us",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "footer": {
     "copyright": "© {year} Royal Taxi Barcelona. All rights reserved.",
@@ -22,80 +25,65 @@
   },
   "home": {
     "metaTitle": "Premium Taxi Service in Barcelona",
-    "metaDescription": "Private, airport and city transfers in Barcelona with premium service and fast WhatsApp response.",
-    "heroTitle": "Premium Taxi Service in Barcelona – Airport & City Transfers",
-    "heroSubtitle": "Reliable private transfers, airport pickups and city rides with punctual, licensed drivers.",
-    "heroWhatsapp": "Book on WhatsApp",
+    "metaDescription": "Licensed taxi and airport transfer service in Barcelona with fast WhatsApp booking and reliable pickup timing.",
+    "heroTitle": "Barcelona Taxi & Airport Transfers",
+    "heroSubtitle": "Professional licensed drivers, punctual pickups and direct WhatsApp booking for airport, city and long-distance rides.",
+    "heroBadge": "Barcelona • Licensed • 24/7",
+    "heroWhatsapp": "Book via WhatsApp",
     "heroCall": "Call Now",
-    "trustBadges": {
-      "always": "24/7 Available",
-      "meet": "Meet & Greet",
-      "licensed": "Licensed Drivers",
-      "airport": "Airport Transfers",
-      "fast": "Fixed Pricing"
-    },
-    "servicesTitle": "Services Overview",
+    "heroQuote": "Request Quote",
+    "servicesTitle": "Taxi Services",
     "services": {
       "airportTitle": "Airport Taxi",
-      "airportDesc": "Smooth transfers to and from Barcelona Airport with flight-aware pickup timing.",
+      "airportDesc": "Reliable transfers between Barcelona Airport terminals and city destinations.",
       "cityTitle": "City Taxi",
-      "cityDesc": "Comfortable rides across Barcelona for business meetings, hotels and restaurants.",
-      "longTitle": "Long Distance Taxi",
-      "longDesc": "Private intercity travel from Barcelona with premium comfort and direct routing.",
-      "whatsapp": "Ask on WhatsApp",
+      "cityDesc": "Efficient urban transfers for hotels, offices, restaurants and events.",
+      "longTitle": "Long-Distance Taxi",
+      "longDesc": "Direct intercity taxi travel from Barcelona with clear communication and punctual service.",
       "bookNow": "Book Now",
-      "more": "View services"
+      "more": "View all services"
     },
-    "fleetTitle": "Fleet Overview",
+    "fleetTitle": "Vehicle Options",
     "fleet": {
-      "standardTitle": "Standard Taxi (4 pax)",
-      "standardDesc": "Ideal for daily trips, airport transfers and short business routes.",
-      "premiumTitle": "Premium Taxi (Mercedes)",
-      "premiumDesc": "Executive comfort for corporate transfers and premium city travel.",
-      "premiumPrice": "From €59",
-      "vanTitle": "Van Taxi (8 pax)",
-      "vanDesc": "Group-friendly transport for families, events and luggage-heavy rides.",
-      "standardPrice": "From €39",
-      "vanPrice": "From €69",
-      "pax": "pax",
-      "whatsapp": "Request vehicle",
-      "bookVehicle": "Book This Vehicle",
-      "more": "View fleet"
+      "standardTitle": "Standard Taxi",
+      "standardDesc": "Ideal for everyday city rides and airport transfers.",
+      "premiumTitle": "Premium Sedan",
+      "premiumDesc": "Extra comfort for business travel and premium transfers.",
+      "vanTitle": "8-Seater Van",
+      "vanDesc": "Spacious option for families, groups and additional luggage.",
+      "bookVehicle": "Request This Vehicle",
+      "more": "View full fleet"
     },
     "whyTitle": "Why Choose Royal Taxi Barcelona",
-    "whyParagraph": "We focus on punctuality, comfort and direct communication so your transfer is effortless from the first message.",
+    "whyParagraph": "A modern Barcelona taxi partner focused on reliability, transparency and practical premium comfort.",
     "whyBullets": {
       "one": "Professional licensed drivers",
-      "two": "Premium clean vehicles",
-      "three": "Fast direct WhatsApp support",
-      "four": "Reliable service for airport and city rides"
+      "two": "Clean, modern vehicles",
+      "three": "Fast WhatsApp confirmation",
+      "four": "Reliable airport scheduling"
     },
     "whyCards": {
-      "one": "Trained drivers with local route expertise and professional service standards.",
-      "two": "Modern fleet maintained daily for comfort, cleanliness and safety.",
-      "three": "Instant direct communication with no call-center delays.",
-      "four": "Reliable airport timing and smooth transfers anywhere in Barcelona."
+      "one": "Experienced local drivers with professional service standards.",
+      "two": "Daily-checked vehicles focused on cleanliness, safety and comfort.",
+      "three": "Direct replies for confirmations and real-time transfer updates.",
+      "four": "Consistent timing for airport departures, arrivals and scheduled pickups."
     },
-    "finalTitle": "Need a Premium Taxi in Barcelona?",
-    "finalSupport": "Fast WhatsApp response. Professional drivers. No hidden costs.",
-    "finalButton": "Start on WhatsApp"
+    "finalTitle": "Need a Taxi in Barcelona Today?",
+    "finalSupport": "Send your route and timing by WhatsApp. Our team confirms quickly.",
+    "finalButton": "Book on WhatsApp"
   },
   "servicesPage": {
     "metaTitle": "Taxi Services in Barcelona",
-    "metaDescription": "Airport, cruise port, city, long-distance and business taxi services in Barcelona.",
+    "metaDescription": "Barcelona airport transfers, city taxis and long-distance routes with licensed drivers and fast confirmation.",
     "title": "Taxi Services",
-    "intro": "Choose your transfer type and get quick confirmation by WhatsApp or phone.",
+    "intro": "Core services designed for punctual travel, clear communication and professional execution.",
     "items": {
       "airportTitle": "Airport Taxi",
-      "airportDesc": "On-time transfers between Barcelona city and airport terminals.",
-      "cruiseTitle": "Cruise Port Taxi",
-      "cruiseDesc": "Direct rides to and from Barcelona cruise terminals with luggage assistance.",
+      "airportDesc": "Airport pickups and drop-offs with practical planning around your flight timing.",
       "cityTitle": "City Taxi",
-      "cityDesc": "Fast and comfortable urban mobility for leisure and business needs.",
-      "longTitle": "Long Distance Taxi",
-      "longDesc": "Private long-distance travel from Barcelona with fixed routing and comfort.",
-      "businessTitle": "Business Taxi",
-      "businessDesc": "Professional executive transport for meetings, events and corporate guests."
+      "cityDesc": "Fast and comfortable city transfers for business and personal travel.",
+      "longTitle": "Long-Distance Taxi",
+      "longDesc": "Direct routes from Barcelona to regional destinations with dependable timing."
     },
     "bookNow": "Book Now",
     "whatsapp": "WhatsApp",
@@ -103,44 +91,72 @@
   },
   "fleetPage": {
     "metaTitle": "Taxi Fleet",
-    "metaDescription": "Standard, premium Mercedes and 8-passenger van taxi options in Barcelona.",
+    "metaDescription": "Standard, premium sedan, 8-seater van and executive taxi options for Barcelona transfers.",
     "title": "Our Fleet",
-    "intro": "Select the right vehicle class for your trip profile, comfort level and passenger needs.",
+    "intro": "Choose the right vehicle for passenger count, luggage needs and travel priority.",
     "cards": {
       "standardTitle": "Standard Taxi",
       "standardCapacity": "Capacity: up to 4 passengers",
-      "standardDesc": "Balanced comfort and reliability for city transfers and airport routes.",
-      "standardPrice": "From €39",
-      "premiumTitle": "Premium Taxi (Mercedes)",
+      "standardLuggage": "Luggage: 2 large",
+      "standardDesc": "Balanced option for city transfers and airport travel.",
+      "premiumTitle": "Premium Sedan",
       "premiumCapacity": "Capacity: up to 4 passengers",
-      "premiumDesc": "Refined executive experience for business travel and premium journeys.",
-      "premiumPrice": "From €59",
-      "vanTitle": "Van Taxi",
+      "premiumLuggage": "Luggage: 3 medium",
+      "premiumDesc": "Enhanced comfort for executive guests and premium routes.",
+      "vanTitle": "8-Seater Van",
       "vanCapacity": "Capacity: up to 8 passengers",
-      "vanDesc": "Spacious solution for groups, families and transfers with extra luggage.",
-      "vanPrice": "From €69"
+      "vanLuggage": "Luggage: 8 cabin",
+      "vanDesc": "Ideal for groups, families and extra luggage.",
+      "executiveTitle": "Executive Option",
+      "executiveCapacity": "Capacity: up to 3 passengers",
+      "executiveLuggage": "Luggage: 2 medium",
+      "executiveDesc": "Professional option for priority itineraries and corporate mobility."
     },
-    "bookVehicle": "Book This Vehicle",
+    "bookVehicle": "Request This Vehicle",
     "whatsapp": "Request on WhatsApp"
   },
-  "privateTransfersPage": {
-    "metaTitle": "Private Transfers",
-    "metaDescription": "Executive private chauffeur transfers in Barcelona with discreet, punctual service.",
-    "title": "Private Transfers",
-    "intro": "A discreet chauffeur-style service designed for executives, VIP guests and travelers who value precision.",
-    "paragraph1": "From airport arrivals to hotel and meeting transfers, every route is planned for efficiency and calm travel.",
-    "paragraph2": "Your driver arrives prepared, your vehicle is presented to premium standards and communication stays direct from booking to drop-off.",
-    "cta": "Arrange Private Transfer on WhatsApp"
+  "whyUsPage": {
+    "metaTitle": "Why Choose Royal Taxi Barcelona",
+    "metaDescription": "See why travelers and companies rely on Royal Taxi Barcelona for airport and city transfers.",
+    "title": "Why Us",
+    "intro": "A professional taxi service built around reliable operations, direct communication and consistent standards.",
+    "items": {
+      "reliabilityTitle": "Operational Reliability",
+      "reliabilityDesc": "Each transfer is managed with clear timing and dependable execution.",
+      "driversTitle": "Professional Drivers",
+      "driversDesc": "Licensed professionals with local route knowledge and stable service quality.",
+      "communicationTitle": "Direct Communication",
+      "communicationDesc": "Fast WhatsApp and phone response, without unnecessary call-center delays.",
+      "coverageTitle": "Practical Coverage",
+      "coverageDesc": "Airport, city and long-distance routes delivered with the same professional approach."
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact Royal Taxi Barcelona",
+    "metaDescription": "Contact Royal Taxi Barcelona by phone or WhatsApp for quick transfer confirmation.",
+    "title": "Contact",
+    "intro": "Choose your preferred channel and receive a quick response from our dispatch team.",
+    "callTitle": "Call Us",
+    "callDescription": "Recommended for urgent departures and immediate pickup requests.",
+    "callNow": "Call Now",
+    "whatsappTitle": "WhatsApp Us",
+    "whatsappDescription": "Ideal for sending addresses, flight details and special travel notes.",
+    "whatsappNow": "Open WhatsApp"
   },
   "quotePage": {
     "metaTitle": "Get a Taxi Quote in Barcelona",
     "metaDescription": "Request a quick quote for your Barcelona taxi ride. We reply via WhatsApp or phone.",
     "title": "Get a Taxi Quote",
-    "intro": "Tell us your transfer details and we will reply quickly with the best option for your trip.",
-    "reassurance": "Available 24/7 on WhatsApp and phone for urgent requests.",
+    "intro": "Share your transfer details and our team will respond quickly with the best available option.",
+    "reassurance": "Available by WhatsApp and phone for urgent and scheduled transfers.",
+    "chips": {
+      "fast": "Fast response",
+      "licensed": "Licensed drivers",
+      "airport": "Airport specialists"
+    },
     "whatsapp": "WhatsApp",
     "callNow": "Call Now",
-    "successTitle": "We will contact you shortly via WhatsApp or phone.",
+    "successTitle": "Thank you. We will contact you shortly via WhatsApp or phone.",
     "successNote": "If your transfer is urgent, contact us directly now.",
     "form": {
       "name": "Full name",

@@ -15,7 +15,7 @@ export function LocaleSwitcher() {
       <span className="sr-only">{t("language")}</span>
       <select
         aria-label={t("language")}
-        className="h-9 rounded-full border border-[var(--color-border)] bg-white px-3 text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)]"
+        className="h-9 rounded-full border border-[var(--color-border)] bg-white px-3 text-[var(--color-navy)] outline-none transition focus:border-[var(--color-gold)]"
         value={locale}
         onChange={(event) => {
           const nextLocale = event.target.value as (typeof routing.locales)[number];

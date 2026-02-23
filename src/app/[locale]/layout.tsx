@@ -3,11 +3,10 @@ import {Manrope, Playfair_Display} from "next/font/google";
 import {NextIntlClientProvider, hasLocale} from "next-intl";
 import {getMessages, setRequestLocale} from "next-intl/server";
 import {notFound} from "next/navigation";
-import {routing} from "@/i18n/routing";
-import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-import {StickyMobileCTA} from "@/components/StickyMobileCTA";
 import {FloatingContactButtons} from "@/components/FloatingContactButtons";
+import {Header} from "@/components/Header";
+import {routing} from "@/i18n/routing";
 import "../globals.css";
 
 const sans = Manrope({
@@ -62,10 +61,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pb-20 md:pb-0">{children}</main>
             <Footer />
           </div>
-          <StickyMobileCTA />
           <FloatingContactButtons />
         </NextIntlClientProvider>
       </body>
