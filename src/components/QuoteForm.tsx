@@ -133,7 +133,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
           <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="whatsapp">
             {t("whatsapp")}
           </Button>
-          <Button href="tel:+34617629115" variant="secondary">
+          <Button href="tel:+34617629115" variant="outline">
             {t("callNow")}
           </Button>
         </div>
