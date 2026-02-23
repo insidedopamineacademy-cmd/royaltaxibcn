@@ -27,10 +27,14 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-card)]/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[var(--color-navy)] text-white backdrop-blur">
       <Container className="py-3">
         <div className="flex min-h-14 items-center justify-between gap-4">
-          <Link href="/" className="shrink-0" aria-label="Royal Taxi Barcelona">
+          <Link
+            href="/"
+            className="shrink-0 rounded-md bg-white px-2 py-1"
+            aria-label="Royal Taxi Barcelona"
+          >
             <Image src="/logo.svg" alt="Royal Taxi Barcelona" width={170} height={38} priority />
           </Link>
 
@@ -45,8 +49,8 @@ export function Header() {
                   aria-current={isActive ? "page" : undefined}
                   className={`text-sm font-medium transition ${
                     isActive
-                      ? "text-[var(--color-navy)]"
-                      : "text-[var(--color-muted)] hover:text-[var(--color-navy)]"
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
                   }`}
                 >
                   {t(item.key)}
@@ -64,7 +68,7 @@ export function Header() {
               type="button"
               aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={menuOpen}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--color-border)] bg-white text-[var(--color-navy)] lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white lg:hidden"
               onClick={() => setMenuOpen((prev) => !prev)}
             >
               {menuOpen ? "✕" : "☰"}
@@ -73,7 +77,7 @@ export function Header() {
         </div>
 
         {menuOpen ? (
-          <nav className="mt-3 rounded-2xl border border-[var(--color-border)] bg-white p-3 shadow-soft lg:hidden">
+          <nav className="mt-3 rounded-2xl border border-white/10 bg-[var(--color-navy)] p-3 shadow-soft lg:hidden">
             <ul className="flex flex-col gap-1">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
@@ -85,8 +89,8 @@ export function Header() {
                       aria-current={isActive ? "page" : undefined}
                       className={`block rounded-lg px-3 py-2 text-sm font-medium transition ${
                         isActive
-                          ? "bg-[var(--color-surface)] text-[var(--color-navy)]"
-                          : "text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-navy)]"
+                          ? "bg-white/10 text-white"
+                          : "text-white/70 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       {t(item.key)}
