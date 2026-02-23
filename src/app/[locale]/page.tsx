@@ -122,7 +122,7 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-navy)]" id="fleet" containerClassName="max-w-7xl">
+      <SectionContainer className="dark-section" id="fleet" containerClassName="max-w-7xl">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl text-white md:text-3xl">{t("fleetTitle")}</h2>
           <Link href="/fleet" className="text-sm font-semibold text-[var(--color-gold)] hover:text-[#e4cf95]">
