@@ -36,28 +36,28 @@ export default async function FleetPage({params}: PageProps) {
       capacity: t("cards.standardCapacity"),
       luggage: t("cards.standardLuggage"),
       description: t("cards.standardDesc"),
-      image: "/fleet-standard.svg",
+      image: "/images/taxi-barcelona-prius-plus.webp",
     },
     {
       title: t("cards.premiumTitle"),
       capacity: t("cards.premiumCapacity"),
       luggage: t("cards.premiumLuggage"),
       description: t("cards.premiumDesc"),
-      image: "/fleet-premium.svg",
+      image: "/images/taxi-class-barcelona-mercedes.webp",
     },
     {
       title: t("cards.vanTitle"),
       capacity: t("cards.vanCapacity"),
       luggage: t("cards.vanLuggage"),
       description: t("cards.vanDesc"),
-      image: "/fleet-van.svg",
+      image: "/images/taxi-van-barcelona.webp",
     },
     {
       title: t("cards.executiveTitle"),
       capacity: t("cards.executiveCapacity"),
       luggage: t("cards.executiveLuggage"),
       description: t("cards.executiveDesc"),
-      image: "/fleet-premium.svg",
+      image: "/images/luxury-chauffeur-van-barcelona-service.webp",
     },
   ];
 
