@@ -187,9 +187,9 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-ink)]" id="contact" containerClassName="max-w-5xl text-center">
-        <h2 className="text-2xl text-white md:text-3xl">{t("finalTitle")}</h2>
-        <p className="mx-auto mt-4 max-w-prose leading-7 text-white/90">{t("finalSupport")}</p>
+      <SectionContainer className="dark-section" id="contact" containerClassName="max-w-5xl text-center">
+        <h2 className="text-2xl md:text-3xl">{t("finalTitle")}</h2>
+        <p className="mx-auto mt-4 max-w-prose leading-7">{t("finalSupport")}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button href={whatsappHref} variant="whatsapp" target="_blank" rel="noopener noreferrer" className="h-12 px-8">
             {t("finalButton")}
