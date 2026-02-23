@@ -179,9 +179,9 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[#0f0f0f]" id="why" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[#0f0f0f] text-white" id="why" containerClassName="max-w-7xl">
         <h2 className="text-2xl text-white md:text-3xl">{t("whyChoose.title")}</h2>
-        <p className="mt-4 max-w-prose leading-7 text-gray-300">{t("whyChoose.intro")}</p>
+        <p className="mt-4 max-w-prose leading-7 text-white/80">{t("whyChoose.intro")}</p>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {whyChooseFeatures.map((feature) => (
             <article
@@ -264,37 +264,55 @@ export default async function HomePage({params}: PageProps) {
           {t("coreValues.subtitle")}
         </p>
 
-        {/* Desktop diagram */}
+        {/* Desktop diagram (matches original HTML) */}
         <div className="relative mx-auto mt-10 hidden h-[500px] w-[500px] items-center justify-center rounded-full border-2 border-dashed border-[var(--color-border)] md:flex">
-          <div className="absolute left-1/2 top-1/2 flex h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#f9f9f9] px-6 text-center shadow-sm">
+          <div className="absolute flex h-[220px] w-[220px] flex-col items-center justify-center rounded-full bg-[#f9f9f9] px-6 text-center shadow-sm">
             <h3 className="text-sm font-extrabold tracking-wide text-[var(--color-gold)]">{t("coreValues.centerTitle")}</h3>
-            <p className="mt-2 text-xs leading-6 text-[var(--color-muted)]">{t("coreValues.centerSubtitle")}</p>
+            <p className="mt-2 text-xs leading-6 text-[var(--color-ink)]/80">{t("coreValues.centerSubtitle")}</p>
           </div>
 
-          {coreValues.map((value, index) => (
-            <div
-              key={value}
-              className={`absolute max-w-[180px] rounded-xl bg-white px-4 py-2 text-xs font-semibold text-[var(--color-ink)] shadow-md ring-1 ring-[var(--color-border)] ${valuePositions[index]}`}
-            >
-              <span className="mr-2 text-[var(--color-gold)]">✔</span>
-              {value}
-            </div>
-          ))}
+          {coreValues.map((value, index) => {
+            const positions = [
+              "top-[-30px] left-1/2 -translate-x-1/2",
+              "top-[60px] right-[-60px]",
+              "top-1/2 right-[-90px] -translate-y-1/2",
+              "bottom-[60px] right-[-60px]",
+              "bottom-[-30px] left-1/2 -translate-x-1/2",
+              "bottom-[60px] left-[-60px]",
+              "top-1/2 left-[-90px] -translate-y-1/2",
+            ];
+
+            return (
+              <div
+                key={value}
+                className={`absolute w-[160px] rounded-xl bg-white px-3.5 py-2 text-[13px] font-medium leading-snug text-[var(--color-ink)] shadow-md ring-1 ring-[var(--color-border)] ${positions[index]}`}
+              >
+                <span className="mr-2 text-[var(--color-gold)]">✔</span>
+                {value}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Mobile fallback */}
-        <div className="mt-8 grid grid-cols-1 gap-3 md:hidden">
+        {/* Mobile / small screens: clean stacked fallback */}
+        <div className="mx-auto mt-8 max-w-xl space-y-3 md:hidden">
           <div className="rounded-2xl border border-[var(--color-border)] bg-[#f9f9f9] px-5 py-4 text-center">
             <p className="text-xs font-extrabold tracking-wide text-[var(--color-gold)]">{t("coreValues.centerTitle")}</p>
             <p className="mt-2 text-sm font-semibold text-[var(--color-ink)]">{t("coreValues.centerTitleMobile")}</p>
             <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{t("coreValues.centerSubtitle")}</p>
           </div>
-          {coreValues.map((value) => (
-            <div key={value} className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-medium text-[var(--color-ink)] shadow-sm">
-              <span className="mr-2 text-[var(--color-gold)]">✔</span>
-              {value}
-            </div>
-          ))}
+
+          <div className="grid grid-cols-1 gap-3">
+            {coreValues.map((value) => (
+              <div
+                key={value}
+                className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-medium text-[var(--color-ink)] shadow-sm"
+              >
+                <span className="mr-2 text-[var(--color-gold)]">✔</span>
+                {value}
+              </div>
+            ))}
+          </div>
         </div>
       </SectionContainer>
 
@@ -309,9 +327,9 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[#0f0f0f]" id="contact" containerClassName="max-w-5xl text-center">
+      <SectionContainer className="bg-[#0f0f0f] text-white" id="contact" containerClassName="max-w-5xl text-center">
         <h2 className="text-2xl text-white md:text-3xl">{t("closing.title")}</h2>
-        <p className="mx-auto mt-4 max-w-prose leading-7 text-gray-300">{t("closing.paragraph")}</p>
+        <p className="mx-auto mt-4 max-w-prose leading-7 text-white/80">{t("closing.paragraph")}</p>
         <div className="mt-8 flex justify-center">
           <Button href={whatsappHref} variant="whatsapp" target="_blank" rel="noopener noreferrer" className="h-12 px-8">
             {t("closing.cta")}

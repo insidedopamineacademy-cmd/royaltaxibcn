@@ -86,16 +86,19 @@
       }
     },
     "coreValues": {
-      "title": "Siete Valores Clave",
-      "center": "Estándares Premium de Taxi",
+      "title": "7 Valores Clave",
+      "subtitle": "Que hacen de nosotros el servicio de taxi y traslados más fiable en Barcelona",
+      "centerTitle": "7 VALORES\nCLAVE",
+      "centerTitleMobile": "7 VALORES CLAVE",
+      "centerSubtitle": "Que definen cada trayecto con Royal Taxi Barcelona",
       "items": {
-        "one": "Puntualidad",
-        "two": "Seguridad",
-        "three": "Claridad",
-        "four": "Profesionalidad",
-        "five": "Comodidad",
-        "six": "Fiabilidad",
-        "seven": "Respeto"
+        "one": "Conductores altamente formados",
+        "two": "Vehículos modernos y limpios",
+        "three": "Precios transparentes",
+        "four": "Soporte 24/7 y reservas flexibles",
+        "five": "Puntualidad y seriedad",
+        "six": "Meet & Greet en llegadas",
+        "seven": "Seguridad como prioridad"
       }
     },
     "serviceAreas": {

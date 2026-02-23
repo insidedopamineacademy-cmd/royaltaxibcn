@@ -86,16 +86,19 @@
       }
     },
     "coreValues": {
-      "title": "Seven Core Values",
-      "center": "Premium Taxi Standards",
+      "title": "Why Choose Royal Transfers BCN for Your Chauffeur, Airport Transfers & Taxis",
+      "subtitle": "Discover our 7 core values that define every Royal Transfers journey — from luxury comfort to professional reliability.",
+      "centerTitle": "7 CORE VALUES",
+      "centerTitleMobile": "Premium Taxi Standards",
+      "centerSubtitle": "That make us the most trusted chauffeur & taxi company in Barcelona",
       "items": {
-        "one": "Punctuality",
-        "two": "Safety",
-        "three": "Clarity",
-        "four": "Professionalism",
-        "five": "Comfort",
-        "six": "Reliability",
-        "seven": "Respect"
+        "one": "Highly Trained Drivers",
+        "two": "Modern & Clean Vehicles",
+        "three": "Transparent Pricing",
+        "four": "24/7 Support & Flexible Booking",
+        "five": "Punctuality & Veracity",
+        "six": "Meet & Greet at Arrivals",
+        "seven": "Safety as Our Priority"
       }
     },
     "serviceAreas": {
