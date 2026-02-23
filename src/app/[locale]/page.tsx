@@ -110,13 +110,13 @@ export default async function HomePage({params}: PageProps) {
   ];
 
   const valuePositions = [
-    "left-1/2 top-2 -translate-x-1/2",
-    "right-8 top-16",
-    "right-2 top-1/2 -translate-y-1/2",
-    "right-10 bottom-16",
-    "left-1/2 bottom-2 -translate-x-1/2",
-    "left-10 bottom-16",
-    "left-2 top-1/2 -translate-y-1/2",
+    "left-1/2 top-[-18px] -translate-x-1/2",
+    "right-[-58px] top-[70px]",
+    "right-[-88px] top-1/2 -translate-y-1/2",
+    "right-[-58px] bottom-[70px]",
+    "left-1/2 bottom-[-18px] -translate-x-1/2",
+    "left-[-58px] bottom-[70px]",
+    "left-[-88px] top-1/2 -translate-y-1/2",
   ];
 
   const serviceAreas = [
@@ -201,7 +201,7 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" id="fleet" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[#f9f9f9]" id="fleet" containerClassName="max-w-7xl">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl md:text-3xl">{t("fleetTitle")}</h2>
@@ -258,25 +258,40 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
-        <h2 className="text-center text-2xl md:text-3xl">{t("coreValues.title")}</h2>
-        <div className="relative mx-auto mt-10 hidden h-[30rem] w-[30rem] md:block">
-          <div className="absolute inset-16 rounded-full border border-[var(--color-border)]" />
-          <div className="absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-gold)] bg-white px-4 text-center text-sm font-semibold text-[var(--color-ink)]">
-            {t("coreValues.center")}
+      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
+        <h2 className="text-center text-2xl text-[var(--color-ink)] md:text-3xl">{t("coreValues.title")}</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-7 text-[var(--color-muted)]">
+          {t("coreValues.subtitle")}
+        </p>
+
+        {/* Desktop diagram */}
+        <div className="relative mx-auto mt-10 hidden h-[500px] w-[500px] items-center justify-center rounded-full border-2 border-dashed border-[var(--color-border)] md:flex">
+          <div className="absolute left-1/2 top-1/2 flex h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full bg-[#f9f9f9] px-6 text-center shadow-sm">
+            <h3 className="text-sm font-extrabold tracking-wide text-[var(--color-gold)]">{t("coreValues.centerTitle")}</h3>
+            <p className="mt-2 text-xs leading-6 text-[var(--color-muted)]">{t("coreValues.centerSubtitle")}</p>
           </div>
+
           {coreValues.map((value, index) => (
             <div
               key={value}
-              className={`absolute flex h-24 w-24 items-center justify-center rounded-full border border-[var(--color-border)] bg-white px-3 text-center text-xs font-semibold text-[var(--color-ink)] shadow-sm ${valuePositions[index]}`}
+              className={`absolute max-w-[180px] rounded-xl bg-white px-4 py-2 text-xs font-semibold text-[var(--color-ink)] shadow-md ring-1 ring-[var(--color-border)] ${valuePositions[index]}`}
             >
+              <span className="mr-2 text-[var(--color-gold)]">✔</span>
               {value}
             </div>
           ))}
         </div>
+
+        {/* Mobile fallback */}
         <div className="mt-8 grid grid-cols-1 gap-3 md:hidden">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-[#f9f9f9] px-5 py-4 text-center">
+            <p className="text-xs font-extrabold tracking-wide text-[var(--color-gold)]">{t("coreValues.centerTitle")}</p>
+            <p className="mt-2 text-sm font-semibold text-[var(--color-ink)]">{t("coreValues.centerTitleMobile")}</p>
+            <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{t("coreValues.centerSubtitle")}</p>
+          </div>
           {coreValues.map((value) => (
-            <div key={value} className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-medium">
+            <div key={value} className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-medium text-[var(--color-ink)] shadow-sm">
+              <span className="mr-2 text-[var(--color-gold)]">✔</span>
               {value}
             </div>
           ))}
