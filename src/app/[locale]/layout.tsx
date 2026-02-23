@@ -7,6 +7,7 @@ import {routing} from "@/i18n/routing";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {StickyMobileCTA} from "@/components/StickyMobileCTA";
+import {FloatingContactButtons} from "@/components/FloatingContactButtons";
 import "../globals.css";
 
 const sans = Manrope({
@@ -65,6 +66,7 @@ export default async function LocaleLayout({
             <Footer />
           </div>
           <StickyMobileCTA />
+          <FloatingContactButtons />
         </NextIntlClientProvider>
       </body>
     </html>

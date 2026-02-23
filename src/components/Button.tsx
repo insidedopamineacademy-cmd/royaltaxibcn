@@ -5,7 +5,7 @@ import {
   ReactNode,
 } from "react";
 
-type ButtonVariant = "primary" | "outline";
+type ButtonVariant = "primary" | "outline" | "whatsapp";
 
 type BaseProps = {
   children: ReactNode;
@@ -27,13 +27,15 @@ type ButtonProps = AnchorButtonProps | NativeButtonProps;
 
 const styles: Record<ButtonVariant, string> = {
   primary:
-    "border border-[var(--color-gold)] bg-[var(--color-gold)] text-[var(--color-ink)] hover:opacity-90",
+    "border border-[#2563EB] bg-[#2563EB] text-white hover:bg-blue-700",
   outline:
     "border border-[var(--color-ink)] bg-transparent text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-white",
+  whatsapp:
+    "border border-[#25D366] bg-[#25D366] text-white hover:bg-emerald-500",
 };
 
 const baseStyle =
-  "inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-semibold tracking-wide transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]";
+  "inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]";
 
 export function Button(props: AnchorButtonProps): ReactElement;
 export function Button(props: NativeButtonProps): ReactElement;

@@ -31,7 +31,8 @@
       "always": "Disponible 24/7",
       "meet": "Meet & Greet",
       "licensed": "Conductores Autorizados",
-      "fast": "Respuesta Rápida por WhatsApp"
+      "airport": "Traslados Aeropuerto",
+      "fast": "Precio Fijo"
     },
     "servicesTitle": "Resumen de Servicios",
     "services": {
@@ -42,6 +43,7 @@
       "longTitle": "Taxi Larga Distancia",
       "longDesc": "Viajes privados interurbanos desde Barcelona con confort premium.",
       "whatsapp": "Consultar por WhatsApp",
+      "bookNow": "Reservar Ahora",
       "more": "Ver servicios"
     },
     "fleetTitle": "Resumen de Flota",
@@ -50,9 +52,14 @@
       "standardDesc": "Ideal para traslados diarios, aeropuerto y trayectos cortos de negocio.",
       "premiumTitle": "Taxi Premium (Mercedes)",
       "premiumDesc": "Confort ejecutivo para traslados corporativos y viajes premium.",
+      "premiumPrice": "Desde 59 €",
       "vanTitle": "Taxi Van (8 pax)",
       "vanDesc": "Transporte para grupos, familias y equipaje voluminoso.",
+      "standardPrice": "Desde 39 €",
+      "vanPrice": "Desde 69 €",
+      "pax": "plazas",
       "whatsapp": "Solicitar vehículo",
+      "bookVehicle": "Reservar Este Vehículo",
       "more": "Ver flota"
     },
     "whyTitle": "Por Qué Elegir Royal Taxi Barcelona",
@@ -62,6 +69,12 @@
       "two": "Vehículos premium impecables",
       "three": "Atención rápida directa por WhatsApp",
       "four": "Servicio confiable para aeropuerto y ciudad"
+    },
+    "whyCards": {
+      "one": "Conductores cualificados con conocimiento local y estándares profesionales.",
+      "two": "Flota moderna revisada a diario para confort, limpieza y seguridad.",
+      "three": "Comunicación directa e inmediata sin esperas ni centralitas.",
+      "four": "Puntualidad real en aeropuerto y traslados fluidos por Barcelona."
     },
     "finalTitle": "¿Necesitas un Taxi Premium en Barcelona?",
     "finalSupport": "Respuesta rápida por WhatsApp. Conductores profesionales. Sin costes ocultos.",
@@ -84,6 +97,7 @@
       "businessTitle": "Taxi de Negocios",
       "businessDesc": "Transporte ejecutivo profesional para reuniones, eventos e invitados corporativos."
     },
+    "bookNow": "Reservar Ahora",
     "whatsapp": "WhatsApp",
     "call": "Llamar"
   },
@@ -96,13 +110,17 @@
       "standardTitle": "Taxi Estándar",
       "standardCapacity": "Capacidad: hasta 4 pasajeros",
       "standardDesc": "Confort y fiabilidad para traslados urbanos y de aeropuerto.",
+      "standardPrice": "Desde 39 €",
       "premiumTitle": "Taxi Premium (Mercedes)",
       "premiumCapacity": "Capacidad: hasta 4 pasajeros",
       "premiumDesc": "Experiencia ejecutiva refinada para viajes de negocios y traslados premium.",
+      "premiumPrice": "Desde 59 €",
       "vanTitle": "Taxi Van",
       "vanCapacity": "Capacidad: hasta 8 pasajeros",
-      "vanDesc": "Solución amplia para grupos, familias y equipaje extra."
+      "vanDesc": "Solución amplia para grupos, familias y equipaje extra.",
+      "vanPrice": "Desde 69 €"
     },
+    "bookVehicle": "Reservar Este Vehículo",
     "whatsapp": "Solicitar por WhatsApp"
   },
   "privateTransfersPage": {

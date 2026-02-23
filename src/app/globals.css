@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --color-gold: #d4af37;
+  --color-bg-dark: #0f172a;
+  --color-gold: #fbbf24;
+  --color-cta-blue: #2563eb;
+  --color-whatsapp: #25d366;
   --color-ink: #0d0d0d;
   --color-surface: #f8f7f4;
   --color-white: #ffffff;
-  --color-border: #e7e5e4;
-  --color-muted: #52525b;
+  --color-border: #e5e7eb;
+  --color-muted: #9ca3af;
 }
 
 @theme inline {
@@ -36,4 +39,18 @@ h6 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.25rem);
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
