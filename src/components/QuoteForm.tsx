@@ -250,12 +250,21 @@ export function QuoteForm({locale}: QuoteFormProps) {
             {formT("date")}
           </label>
           <input
+            key={`date-${form.date || "empty"}`}
             id="date"
             name="date"
             type="date"
             value={form.date}
             onChange={(event) => setForm((prev) => ({...prev, date: event.target.value}))}
-            className="h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            placeholder="YYYY-MM-DD"
+            className={
+              "h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 " +
+              "text-[16px] leading-[1.25] outline-none transition " +
+              "focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30 " +
+              "[color-scheme:light] " +
+              (form.date ? "text-[var(--color-ink)]" : "text-[var(--color-muted)]")
+            }
+            aria-label={formT("date")}
           />
         </div>
 
@@ -264,12 +273,21 @@ export function QuoteForm({locale}: QuoteFormProps) {
             {formT("time")}
           </label>
           <input
+            key={`time-${form.time || "empty"}`}
             id="time"
             name="time"
             type="time"
             value={form.time}
             onChange={(event) => setForm((prev) => ({...prev, time: event.target.value}))}
-            className="h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 text-base text-[var(--color-ink)] outline-none transition focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30"
+            placeholder="HH:MM"
+            className={
+              "h-11 w-full min-w-0 appearance-none rounded-xl border border-[var(--color-border)] bg-white px-3 " +
+              "text-[16px] leading-[1.25] outline-none transition " +
+              "focus:border-[var(--color-gold)] focus:ring-2 focus:ring-[var(--color-gold)]/30 " +
+              "[color-scheme:light] " +
+              (form.time ? "text-[var(--color-ink)]" : "text-[var(--color-muted)]")
+            }
+            aria-label={formT("time")}
           />
         </div>
 
