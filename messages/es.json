@@ -35,11 +35,11 @@
     "servicesTitle": "Servicios de Taxi",
     "services": {
       "airportTitle": "Taxi Aeropuerto",
-      "airportDesc": "Traslados fiables entre terminales del Aeropuerto de Barcelona y la ciudad.",
-      "cityTitle": "Taxi Ciudad",
-      "cityDesc": "Traslados urbanos eficientes para hoteles, oficinas, restaurantes y eventos.",
+      "airportDesc": "Recogidas según horario de vuelo, meet and greet, una hora de espera en aeropuerto y silla infantil bajo solicitud.",
+      "cruiseTitle": "Taxi Puerto de Cruceros",
+      "cruiseDesc": "Traslados desde y hacia Moll Adossat, con encuentro en terminal y ayuda con equipaje.",
       "longTitle": "Taxi Larga Distancia",
-      "longDesc": "Rutas interurbanas directas desde Barcelona con comunicación clara y puntualidad.",
+      "longDesc": "Rutas interurbanas cómodas desde Barcelona, presupuesto cerrado y paradas opcionales.",
       "bookNow": "Reservar Ahora",
       "more": "Ver todos los servicios"
     },
@@ -51,6 +51,7 @@
       "premiumDesc": "Confort adicional para viajes corporativos y traslados premium.",
       "vanTitle": "Van 8 Plazas",
       "vanDesc": "Opción amplia para familias, grupos y equipaje adicional.",
+      "darkSectionIntro": "Elige el vehículo adecuado según ruta, número de pasajeros y equipaje, con el mismo estándar profesional en cada traslado.",
       "bookVehicle": "Solicitar Este Vehículo",
       "more": "Ver flota completa"
     },
@@ -74,16 +75,76 @@
   },
   "servicesPage": {
     "metaTitle": "Servicios de Taxi en Barcelona",
-    "metaDescription": "Traslados aeropuerto, taxi urbano y larga distancia en Barcelona con conductores autorizados.",
+    "metaDescription": "Servicios de taxi en Barcelona para aeropuerto, puerto de cruceros y larga distancia con conductores autorizados.",
     "title": "Servicios de Taxi",
-    "intro": "Servicios clave diseñados para viajes puntuales, comunicación clara y ejecución profesional.",
+    "intro": "Servicios profesionales de taxi en Barcelona para aeropuerto, terminales de crucero y rutas interurbanas.",
     "items": {
       "airportTitle": "Taxi Aeropuerto",
-      "airportDesc": "Recogidas y salidas con planificación práctica según tu horario de vuelo.",
-      "cityTitle": "Taxi Ciudad",
-      "cityDesc": "Traslados cómodos y rápidos para viajes personales y de negocios.",
+      "airportDesc": "Traslados coordinados con tu vuelo, meet and greet, una hora de espera y silla infantil disponible bajo solicitud.",
+      "cruiseTitle": "Taxi Puerto de Cruceros",
+      "cruiseDesc": "Traslados fiables a y desde terminales de cruceros en Barcelona, con coordinación de encuentro y asistencia con equipaje.",
       "longTitle": "Taxi Larga Distancia",
-      "longDesc": "Rutas directas desde Barcelona a destinos regionales con puntualidad fiable."
+      "longDesc": "Trayectos interurbanos cómodos desde Barcelona, con presupuesto cerrado y opción de paradas."
+    },
+    "included": {
+      "title": "Qué Incluye el Servicio",
+      "items": {
+        "one": "Meet and greet para recogidas en aeropuerto y terminal de cruceros",
+        "two": "Política de espera en aeropuerto con seguimiento de retrasos",
+        "three": "Sillas infantiles bajo solicitud previa",
+        "four": "Ayuda con equipaje en origen y destino",
+        "five": "Comunicación multilingüe por WhatsApp y teléfono",
+        "six": "Confirmación clara con punto de recogida y horario del conductor"
+      }
+    },
+    "popularRoutes": {
+      "title": "Rutas Habituales",
+      "items": {
+        "one": "Aeropuerto de Barcelona ↔ Centro de la ciudad",
+        "two": "Aeropuerto de Barcelona ↔ Puerto de Cruceros",
+        "three": "Puerto de Cruceros ↔ Hoteles en Barcelona",
+        "four": "Barcelona ↔ Sitges",
+        "five": "Barcelona ↔ Girona",
+        "six": "Barcelona ↔ Tarragona / Andorra"
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "steps": {
+        "one": {
+          "title": "1. Comparte los detalles",
+          "desc": "Envíanos recogida, destino, fecha y pasajeros por WhatsApp, teléfono o solicitud de presupuesto."
+        },
+        "two": {
+          "title": "2. Confirma el traslado",
+          "desc": "Confirmamos ruta, horario y vehículo rápidamente con un presupuesto claro y transparente."
+        },
+        "three": {
+          "title": "3. Viaja con tranquilidad",
+          "desc": "Tu conductor llega puntual, te ayuda con el equipaje y realiza el traslado sin complicaciones."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "one": {
+          "q": "¿Dónde es el punto de encuentro en el Aeropuerto de Barcelona?",
+          "a": "En llegadas coordinamos el punto exacto según terminal y te enviamos instrucciones claras con antelación."
+        },
+        "two": {
+          "q": "¿Qué pasa si mi vuelo se retrasa?",
+          "a": "Monitorizamos el estado del vuelo y ajustamos la recogida. La espera estándar en aeropuerto está incluida según nuestra política."
+        },
+        "three": {
+          "q": "¿Puedo solicitar silla infantil?",
+          "a": "Sí. Indícanos el tipo de silla antes del servicio y la prepararemos según disponibilidad."
+        },
+        "four": {
+          "q": "¿Realizáis recogidas en cruceros y aceptáis pago con tarjeta?",
+          "a": "Sí. Operamos en terminales de crucero y te confirmamos las opciones de pago disponibles al reservar."
+        }
+      }
     },
     "bookNow": "Reservar Ahora",
     "whatsapp": "WhatsApp",
@@ -120,6 +181,11 @@
     "metaDescription": "Conoce por qué viajeros y empresas confían en Royal Taxi Barcelona.",
     "title": "Por Qué Nosotros",
     "intro": "Servicio profesional de taxi basado en operaciones fiables, comunicación directa y estándares consistentes.",
+    "paragraphs": {
+      "one": "Royal Taxi Barcelona es una empresa local de traslados centrada en un servicio premium práctico para aeropuerto, cruceros y rutas interurbanas. Trabajamos para viajeros que valoran puntualidad, claridad y comunicación profesional.",
+      "two": "Nuestro equipo gestiona cada traslado con atención al horario, coordinación del punto de recogida y eficiencia de ruta. Desde llegadas al aeropuerto hasta salidas de crucero, mantenemos un proceso claro y previsible.",
+      "three": "En lugar de sistemas complejos, trabajamos con comunicación directa por WhatsApp y teléfono. Recibes confirmación rápida, instrucciones claras y un conductor preparado para tu ruta."
+    },
     "items": {
       "reliabilityTitle": "Fiabilidad Operativa",
       "reliabilityDesc": "Cada traslado se gestiona con tiempos claros y ejecución fiable.",
@@ -129,6 +195,26 @@
       "communicationDesc": "Respuesta rápida por WhatsApp y teléfono, sin demoras innecesarias.",
       "coverageTitle": "Cobertura Práctica",
       "coverageDesc": "Aeropuerto, ciudad y larga distancia con el mismo enfoque profesional."
+    },
+    "standards": {
+      "title": "Nuestros Estándares",
+      "items": {
+        "one": "Conductores autorizados y profesionales con conocimiento local de Barcelona",
+        "two": "Vehículos limpios y bien mantenidos para traslados diarios",
+        "three": "Gestión puntual de recogidas para horarios de aeropuerto y crucero",
+        "four": "Comunicación directa por WhatsApp para coordinación rápida",
+        "five": "Experiencia operativa en terminales de aeropuerto y muelles de Moll Adossat",
+        "six": "Presupuestos transparentes con alcance del servicio definido antes de confirmar"
+      }
+    },
+    "whoServe": {
+      "title": "A Quién Damos Servicio",
+      "items": {
+        "one": "Turistas que visitan Barcelona",
+        "two": "Familias que necesitan espacio y opciones de silla infantil",
+        "three": "Viajeros de negocios con horarios exigentes",
+        "four": "Pasajeros de crucero que requieren coordinación en terminal"
+      }
     }
   },
   "contactPage": {

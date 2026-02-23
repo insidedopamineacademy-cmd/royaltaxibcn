@@ -33,7 +33,7 @@ export default async function HomePage({params}: PageProps) {
 
   const services = [
     {title: t("services.airportTitle"), description: t("services.airportDesc")},
-    {title: t("services.cityTitle"), description: t("services.cityDesc")},
+    {title: t("services.cruiseTitle"), description: t("services.cruiseDesc")},
     {title: t("services.longTitle"), description: t("services.longDesc")},
   ];
 
@@ -124,16 +124,20 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-white" id="fleet" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-[var(--color-navy)]" id="fleet" containerClassName="max-w-7xl">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-2xl md:text-3xl">{t("fleetTitle")}</h2>
-          <Link href="/fleet" className="text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-gold)]">
+          <h2 className="text-2xl text-white md:text-3xl">{t("fleetTitle")}</h2>
+          <Link href="/fleet" className="text-sm font-semibold text-[var(--color-gold)] hover:text-[#e4cf95]">
             {t("fleet.more")}
           </Link>
         </div>
+        <p className="mt-3 max-w-prose text-sm leading-7 text-gray-300">{t("fleet.darkSectionIntro")}</p>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {fleet.map((item, index) => (
-            <Card key={item.title} className="p-0">
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-0 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-gold)]"
+            >
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-2xl">
                 <Image
                   src={item.image}
@@ -145,8 +149,8 @@ export default async function HomePage({params}: PageProps) {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg">{item.title}</h3>
-                <p className="mt-3 max-w-prose text-sm leading-7">{item.description}</p>
+                <h3 className="text-lg text-white">{item.title}</h3>
+                <p className="mt-3 max-w-prose text-sm leading-7 text-gray-300">{item.description}</p>
                 <Button
                   href={whatsappHref}
                   target="_blank"
@@ -157,12 +161,12 @@ export default async function HomePage({params}: PageProps) {
                   {t("fleet.bookVehicle")}
                 </Button>
               </div>
-            </Card>
+            </article>
           ))}
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" id="why" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-white" id="why" containerClassName="max-w-7xl">
         <h2 className="text-2xl md:text-3xl">{t("whyTitle")}</h2>
         <p className="mt-4 max-w-prose leading-7">{t("whyParagraph")}</p>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -185,9 +189,9 @@ export default async function HomePage({params}: PageProps) {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-white" id="contact" containerClassName="max-w-5xl text-center">
-        <h2 className="text-2xl md:text-3xl">{t("finalTitle")}</h2>
-        <p className="mx-auto mt-4 max-w-prose leading-7">{t("finalSupport")}</p>
+      <SectionContainer className="bg-[var(--color-ink)]" id="contact" containerClassName="max-w-5xl text-center">
+        <h2 className="text-2xl text-white md:text-3xl">{t("finalTitle")}</h2>
+        <p className="mx-auto mt-4 max-w-prose leading-7 text-gray-300">{t("finalSupport")}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button href={whatsappHref} variant="whatsapp" target="_blank" rel="noopener noreferrer" className="h-12 px-8">
             {t("finalButton")}

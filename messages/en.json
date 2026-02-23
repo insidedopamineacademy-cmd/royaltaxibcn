@@ -35,11 +35,11 @@
     "servicesTitle": "Taxi Services",
     "services": {
       "airportTitle": "Airport Taxi",
-      "airportDesc": "Reliable transfers between Barcelona Airport terminals and city destinations.",
-      "cityTitle": "City Taxi",
-      "cityDesc": "Efficient urban transfers for hotels, offices, restaurants and events.",
+      "airportDesc": "Flight-aware pickups with meet and greet, one hour airport waiting and child seats on request.",
+      "cruiseTitle": "Cruise Port Taxi",
+      "cruiseDesc": "Transfers to and from Moll Adossat terminals with terminal meeting point and luggage assistance.",
       "longTitle": "Long-Distance Taxi",
-      "longDesc": "Direct intercity taxi travel from Barcelona with clear communication and punctual service.",
+      "longDesc": "Comfortable intercity routes from Barcelona with fixed quote and optional stops on request.",
       "bookNow": "Book Now",
       "more": "View all services"
     },
@@ -51,6 +51,7 @@
       "premiumDesc": "Extra comfort for business travel and premium transfers.",
       "vanTitle": "8-Seater Van",
       "vanDesc": "Spacious option for families, groups and additional luggage.",
+      "darkSectionIntro": "Choose the right vehicle for your route, passenger count and luggage needs, with the same professional standard on every transfer.",
       "bookVehicle": "Request This Vehicle",
       "more": "View full fleet"
     },
@@ -74,16 +75,76 @@
   },
   "servicesPage": {
     "metaTitle": "Taxi Services in Barcelona",
-    "metaDescription": "Barcelona airport transfers, city taxis and long-distance routes with licensed drivers and fast confirmation.",
+    "metaDescription": "Airport, cruise port and long-distance taxi services in Barcelona with licensed drivers and fast confirmation.",
     "title": "Taxi Services",
-    "intro": "Core services designed for punctual travel, clear communication and professional execution.",
+    "intro": "Professional taxi services in Barcelona for airport transfers, cruise terminal pickups and long-distance routes.",
     "items": {
       "airportTitle": "Airport Taxi",
-      "airportDesc": "Airport pickups and drop-offs with practical planning around your flight timing.",
-      "cityTitle": "City Taxi",
-      "cityDesc": "Fast and comfortable city transfers for business and personal travel.",
+      "airportDesc": "Flight-aware transfers with meet and greet, one-hour airport waiting and child seats available on request.",
+      "cruiseTitle": "Cruise Port Taxi",
+      "cruiseDesc": "Reliable transfers to and from Barcelona cruise terminals, with terminal pickup coordination and luggage support.",
       "longTitle": "Long-Distance Taxi",
-      "longDesc": "Direct routes from Barcelona to regional destinations with dependable timing."
+      "longDesc": "Comfortable intercity taxi routes from Barcelona with fixed quote options and optional stops."
+    },
+    "included": {
+      "title": "What is Included",
+      "items": {
+        "one": "Meet and greet for airport and cruise terminal pickups",
+        "two": "Airport wait-time policy with flight delay awareness",
+        "three": "Child seats on prior request",
+        "four": "Luggage assistance at pickup and drop-off",
+        "five": "Multilingual communication by WhatsApp and phone",
+        "six": "Clear confirmation with pickup details and driver timing"
+      }
+    },
+    "popularRoutes": {
+      "title": "Typical Routes",
+      "items": {
+        "one": "Barcelona Airport ↔ City Center",
+        "two": "Barcelona Airport ↔ Cruise Port",
+        "three": "Cruise Port ↔ Hotels in Barcelona",
+        "four": "Barcelona ↔ Sitges",
+        "five": "Barcelona ↔ Girona",
+        "six": "Barcelona ↔ Tarragona / Andorra"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "one": {
+          "title": "1. Share your transfer details",
+          "desc": "Send pickup, drop-off, date and passenger details by WhatsApp, phone or quote request."
+        },
+        "two": {
+          "title": "2. Confirm your ride",
+          "desc": "We confirm route, timing and vehicle quickly with a clear and transparent quote."
+        },
+        "three": {
+          "title": "3. Ride with confidence",
+          "desc": "Your driver arrives on time, helps with luggage and completes your transfer smoothly."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "one": {
+          "q": "Where do you meet at Barcelona Airport?",
+          "a": "For arrivals, we coordinate the exact meeting point by terminal and share clear pickup instructions in advance."
+        },
+        "two": {
+          "q": "What happens if my flight is delayed?",
+          "a": "We monitor flight status and adjust pickup timing. Standard airport waiting is included within our policy."
+        },
+        "three": {
+          "q": "Can I request child seats?",
+          "a": "Yes. Tell us the required child seat type before the transfer and we will prepare it when available."
+        },
+        "four": {
+          "q": "Do you operate cruise terminal pickups and card payments?",
+          "a": "Yes. We provide cruise port transfers and can confirm available payment options when you book."
+        }
+      }
     },
     "bookNow": "Book Now",
     "whatsapp": "WhatsApp",
@@ -120,6 +181,11 @@
     "metaDescription": "See why travelers and companies rely on Royal Taxi Barcelona for airport and city transfers.",
     "title": "Why Us",
     "intro": "A professional taxi service built around reliable operations, direct communication and consistent standards.",
+    "paragraphs": {
+      "one": "Royal Taxi Barcelona is a local transfer company focused on practical premium service for airport, cruise and intercity travel. We are built for travelers who value punctuality, clarity and professional communication.",
+      "two": "Our team manages every transfer with attention to timing, pickup coordination and route efficiency. From airport arrivals to cruise departures, we keep the process straightforward and predictable.",
+      "three": "Instead of complicated booking systems, we keep communication direct by WhatsApp and phone. You get fast confirmations, clear instructions and a driver prepared for your route."
+    },
     "items": {
       "reliabilityTitle": "Operational Reliability",
       "reliabilityDesc": "Each transfer is managed with clear timing and dependable execution.",
@@ -129,6 +195,26 @@
       "communicationDesc": "Fast WhatsApp and phone response, without unnecessary call-center delays.",
       "coverageTitle": "Practical Coverage",
       "coverageDesc": "Airport, city and long-distance routes delivered with the same professional approach."
+    },
+    "standards": {
+      "title": "Our Standards",
+      "items": {
+        "one": "Licensed, professional drivers with local Barcelona route knowledge",
+        "two": "Clean and well-maintained vehicles prepared for daily transfer work",
+        "three": "Punctual pickup management for airport and cruise schedules",
+        "four": "Direct WhatsApp communication for quick coordination",
+        "five": "Operational familiarity with airport terminals and Moll Adossat cruise docks",
+        "six": "Transparent quotes with clear service scope before confirmation"
+      }
+    },
+    "whoServe": {
+      "title": "Who We Serve",
+      "items": {
+        "one": "Tourists visiting Barcelona",
+        "two": "Families needing space and child seat options",
+        "three": "Business travelers with strict timing",
+        "four": "Cruise passengers with terminal coordination needs"
+      }
     }
   },
   "contactPage": {
