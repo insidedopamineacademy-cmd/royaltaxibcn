@@ -36,7 +36,7 @@ h5,
 h6 {
   font-family: var(--font-serif), serif;
   line-height: 1.2;
-  color: var(--color-navy);
+  color: inherit;
 }
 
 a {
@@ -45,9 +45,26 @@ a {
 }
 
 p {
+  color: inherit;
+}
+
+.text-muted {
   color: var(--color-muted);
 }
 
 .pb-safe {
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.25rem);
+}
+
+.dark-section {
+  background: var(--color-navy);
+  color: #ffffff;
+}
+
+.dark-section p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark-section .text-muted {
+  color: rgba(255, 255, 255, 0.65);
 }
