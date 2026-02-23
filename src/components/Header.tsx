@@ -60,7 +60,7 @@ export function Header() {
           </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="/get-a-quote" variant="gold" className="hidden h-10 px-4 text-xs lg:inline-flex">
+          <Button href="/get-a-quote" variant="gold" className="!hidden h-10 px-4 text-xs lg:!inline-flex">
             {t("quote")}
           </Button>
           <LocaleSwitcher />
