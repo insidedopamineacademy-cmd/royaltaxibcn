@@ -24,54 +24,99 @@
     "whatsapp": "WhatsApp"
   },
   "home": {
-    "metaTitle": "Premium Taxi Service in Barcelona",
-    "metaDescription": "Licensed taxi and airport transfer service in Barcelona with fast WhatsApp booking and reliable pickup timing.",
-    "heroTitle": "Barcelona Taxi & Airport Transfers",
-    "heroSubtitle": "Professional licensed drivers, punctual pickups and direct WhatsApp booking for airport, city and long-distance rides.",
+    "metaTitle": "Taxi and Airport Transfers in Barcelona",
+    "metaDescription": "Modern premium taxi service in Barcelona for airport pickups, cruise port transfers and long-distance routes.",
+    "heroTitle": "Reliable Barcelona Taxi and Airport Transfers",
+    "heroSubtitle": "Professional licensed drivers, clear communication and fast WhatsApp booking for airport, cruise and intercity travel.",
     "heroBadge": "Barcelona • Licensed • 24/7",
-    "heroWhatsapp": "Book via WhatsApp",
-    "heroCall": "Call Now",
-    "heroQuote": "Request Quote",
-    "servicesTitle": "Taxi Services",
+    "heroWhatsapp": "Book on WhatsApp",
+    "servicesTitle": "Core Taxi Services",
     "services": {
       "airportTitle": "Airport Taxi",
-      "airportDesc": "Flight-aware pickups with meet and greet, one hour airport waiting and child seats on request.",
+      "airportDesc": "Flight-aware pickups with meet and greet, one-hour waiting policy and child seats on request.",
       "cruiseTitle": "Cruise Port Taxi",
-      "cruiseDesc": "Transfers to and from Moll Adossat terminals with terminal meeting point and luggage assistance.",
+      "cruiseDesc": "Direct transfers to and from Moll Adossat terminals with luggage support and clear terminal meeting points.",
       "longTitle": "Long-Distance Taxi",
-      "longDesc": "Comfortable intercity routes from Barcelona with fixed quote and optional stops on request.",
-      "bookNow": "Book Now",
-      "more": "View all services"
+      "longDesc": "Comfortable intercity transfers from Barcelona with transparent quote confirmation and optional route stops.",
+      "more": "See all services"
     },
-    "fleetTitle": "Vehicle Options",
+    "whyChoose": {
+      "title": "Why Choose Royal Taxi Barcelona",
+      "intro": "A practical premium service model designed for punctual transfers, professional conduct and reliable support every day.",
+      "features": {
+        "one": "Licensed local drivers with airport and port experience",
+        "two": "Fast response by WhatsApp and phone",
+        "three": "Clean, well-maintained vehicles for daily operations",
+        "four": "Consistent timing for scheduled pickups and arrivals"
+      }
+    },
+    "fleetTitle": "Fleet for Every Transfer Type",
+    "fleetIntro": "Premium reliability across all categories, from standard city transfers to executive and group travel.",
     "fleet": {
       "standardTitle": "Standard Taxi",
-      "standardDesc": "Ideal for everyday city rides and airport transfers.",
+      "standardDesc": "Efficient option for daily rides, airport pickups and business appointments.",
       "premiumTitle": "Premium Sedan",
-      "premiumDesc": "Extra comfort for business travel and premium transfers.",
+      "premiumDesc": "A refined transfer option for executive guests and high-priority journeys.",
       "vanTitle": "8-Seater Van",
-      "vanDesc": "Spacious option for families, groups and additional luggage.",
-      "darkSectionIntro": "Choose the right vehicle for your route, passenger count and luggage needs, with the same professional standard on every transfer.",
-      "bookVehicle": "Request This Vehicle",
+      "vanDesc": "Ideal for families, cruise groups and extra luggage requirements.",
+      "executiveTitle": "Executive Van",
+      "executiveDesc": "Comfort-focused vehicle for teams, delegations and longer transfers.",
+      "viewVehicle": "View vehicle details",
       "more": "View full fleet"
     },
-    "whyTitle": "Why Choose Royal Taxi Barcelona",
-    "whyParagraph": "A modern Barcelona taxi partner focused on reliability, transparency and practical premium comfort.",
-    "whyBullets": {
-      "one": "Professional licensed drivers",
-      "two": "Clean, modern vehicles",
-      "three": "Fast WhatsApp confirmation",
-      "four": "Reliable airport scheduling"
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "one": {
+          "title": "Share your trip details",
+          "description": "Send pickup, destination, date and passenger information by WhatsApp."
+        },
+        "two": {
+          "title": "Receive confirmation",
+          "description": "We confirm route, timing and vehicle category with clear communication."
+        },
+        "three": {
+          "title": "Meet your driver",
+          "description": "Your licensed driver arrives on time and assists with luggage when needed."
+        },
+        "four": {
+          "title": "Travel comfortably",
+          "description": "Enjoy a smooth transfer with reliable timing across Barcelona and beyond."
+        }
+      }
     },
-    "whyCards": {
-      "one": "Experienced local drivers with professional service standards.",
-      "two": "Daily-checked vehicles focused on cleanliness, safety and comfort.",
-      "three": "Direct replies for confirmations and real-time transfer updates.",
-      "four": "Consistent timing for airport departures, arrivals and scheduled pickups."
+    "coreValues": {
+      "title": "Seven Core Values",
+      "center": "Premium Taxi Standards",
+      "items": {
+        "one": "Punctuality",
+        "two": "Safety",
+        "three": "Clarity",
+        "four": "Professionalism",
+        "five": "Comfort",
+        "six": "Reliability",
+        "seven": "Respect"
+      }
     },
-    "finalTitle": "Need a Taxi in Barcelona Today?",
-    "finalSupport": "Send your route and timing by WhatsApp. Our team confirms quickly.",
-    "finalButton": "Book on WhatsApp"
+    "serviceAreas": {
+      "title": "Service Areas",
+      "items": {
+        "one": "Barcelona Airport (T1 / T2)",
+        "two": "Barcelona City Center",
+        "three": "Moll Adossat Cruise Terminal",
+        "four": "Sants Station",
+        "five": "Sitges",
+        "six": "Girona",
+        "seven": "Tarragona",
+        "eight": "Andorra routes",
+        "nine": "Corporate routes in Catalonia"
+      }
+    },
+    "closing": {
+      "title": "Trusted Transfers for Every Journey",
+      "paragraph": "Whether you are landing at the airport or departing from the cruise terminal, we coordinate your transfer with precision. In addition, our team confirms every key detail in advance to avoid uncertainty. As a result, your ride remains smooth, punctual and professional from start to finish. Furthermore, we provide direct support by WhatsApp whenever plans change. For peace of mind, choose a Barcelona taxi partner focused on reliability, clarity and service quality.",
+      "cta": "Book on WhatsApp"
+    }
   },
   "servicesPage": {
     "metaTitle": "Taxi Services in Barcelona",

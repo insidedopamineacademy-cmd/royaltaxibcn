@@ -2,8 +2,6 @@ import type {Metadata} from "next";
 import Image from "next/image";
 import {getTranslations, setRequestLocale} from "next-intl/server";
 import {Button} from "@/components/Button";
-import {Card} from "@/components/Card";
-import {PageHeader} from "@/components/PageHeader";
 import {SectionContainer} from "@/components/SectionContainer";
 import {Link} from "@/i18n/navigation";
 
@@ -27,175 +25,281 @@ export default async function HomePage({params}: PageProps) {
   const t = await getTranslations({locale, namespace: "home"});
 
   const whatsappHref =
-    locale === "es"
-      ? "https://wa.me/34617629115?text=Hola%20me%20gustar%C3%ADa%20reservar%20un%20taxi%20en%20Barcelona."
-      : "https://wa.me/34617629115?text=Hello%20I%20would%20like%20to%20book%20a%20taxi%20in%20Barcelona.";
+    "https://wa.me/34617629115?text=Hi%20I%20want%20to%20book%20a%20transfer%20in%20Barcelona";
 
-  const services = [
-    {title: t("services.airportTitle"), description: t("services.airportDesc")},
-    {title: t("services.cruiseTitle"), description: t("services.cruiseDesc")},
-    {title: t("services.longTitle"), description: t("services.longDesc")},
+  const whyChooseFeatures = [
+    t("whyChoose.features.one"),
+    t("whyChoose.features.two"),
+    t("whyChoose.features.three"),
+    t("whyChoose.features.four"),
   ];
 
-  const fleet = [
+  const services = [
+    {
+      title: t("services.airportTitle"),
+      description: t("services.airportDesc"),
+    },
+    {
+      title: t("services.cruiseTitle"),
+      description: t("services.cruiseDesc"),
+    },
+    {
+      title: t("services.longTitle"),
+      description: t("services.longDesc"),
+    },
+  ];
+
+  const fleetCards = [
     {
       title: t("fleet.standardTitle"),
       description: t("fleet.standardDesc"),
-      image: "/images/taxi-barcelona-prius-plus.webp",
+      imageSrc: "/images/taxi-barcelona-prius-plus.webp",
+      href: "/fleet",
     },
     {
       title: t("fleet.premiumTitle"),
       description: t("fleet.premiumDesc"),
-      image: "/images/taxi-class-barcelona-mercedes.webp",
+      imageSrc: "/images/taxi-class-barcelona-mercedes.webp",
+      href: "/fleet",
     },
     {
       title: t("fleet.vanTitle"),
       description: t("fleet.vanDesc"),
-      image: "/images/taxi-van-barcelona.webp",
+      imageSrc: "/images/taxi-van-barcelona.webp",
+      href: "/fleet",
     },
+    {
+      title: t("fleet.executiveTitle"),
+      description: t("fleet.executiveDesc"),
+      imageSrc: "/images/luxury-chauffeur-van-barcelona-service.webp",
+      href: "/fleet",
+    },
+  ];
+
+  const howItWorksSteps = [
+    {
+      iconSrc: "/icons/details.svg",
+      title: t("howItWorks.steps.one.title"),
+      description: t("howItWorks.steps.one.description"),
+    },
+    {
+      iconSrc: "/icons/confirm.svg",
+      title: t("howItWorks.steps.two.title"),
+      description: t("howItWorks.steps.two.description"),
+    },
+    {
+      iconSrc: "/icons/driver.svg",
+      title: t("howItWorks.steps.three.title"),
+      description: t("howItWorks.steps.three.description"),
+    },
+    {
+      iconSrc: "/icons/arrival.svg",
+      title: t("howItWorks.steps.four.title"),
+      description: t("howItWorks.steps.four.description"),
+    },
+  ];
+
+  const coreValues = [
+    t("coreValues.items.one"),
+    t("coreValues.items.two"),
+    t("coreValues.items.three"),
+    t("coreValues.items.four"),
+    t("coreValues.items.five"),
+    t("coreValues.items.six"),
+    t("coreValues.items.seven"),
+  ];
+
+  const valuePositions = [
+    "left-1/2 top-2 -translate-x-1/2",
+    "right-8 top-16",
+    "right-2 top-1/2 -translate-y-1/2",
+    "right-10 bottom-16",
+    "left-1/2 bottom-2 -translate-x-1/2",
+    "left-10 bottom-16",
+    "left-2 top-1/2 -translate-y-1/2",
+  ];
+
+  const serviceAreas = [
+    t("serviceAreas.items.one"),
+    t("serviceAreas.items.two"),
+    t("serviceAreas.items.three"),
+    t("serviceAreas.items.four"),
+    t("serviceAreas.items.five"),
+    t("serviceAreas.items.six"),
+    t("serviceAreas.items.seven"),
+    t("serviceAreas.items.eight"),
+    t("serviceAreas.items.nine"),
   ];
 
   return (
     <>
-      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
-          <span className="inline-flex rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--color-navy)] shadow-none">
+      <SectionContainer className="bg-[#f9f9f9]" containerClassName="max-w-7xl">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="inline-flex rounded-full border border-[var(--color-border)] bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-navy)]">
             {t("heroBadge")}
           </span>
-
-          <PageHeader
-            className="mt-5"
-            title={t("heroTitle")}
-            description={t("heroSubtitle")}
-            action={
-              <div className="flex flex-wrap gap-3">
-                <Button
-                  href={whatsappHref}
-                  variant="whatsapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  leftIcon={<span aria-hidden="true">💬</span>}
-                >
-                  {t("heroWhatsapp")}
-                </Button>
-                <Button
-                  href="tel:+34617629115"
-                  variant="secondary"
-                  leftIcon={<span aria-hidden="true">📞</span>}
-                >
-                  {t("heroCall")}
-                </Button>
-                <Button
-                  href="/get-a-quote"
-                  variant="gold"
-                  leftIcon={<span aria-hidden="true">✦</span>}
-                >
-                  {t("heroQuote")}
-                </Button>
-              </div>
-            }
-          />
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-5xl">
+            {t("heroTitle")}
+          </h1>
+          <p className="mx-auto mt-5 max-w-prose text-base leading-7 text-[var(--color-muted)]">
+            {t("heroSubtitle")}
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Button
+              href={whatsappHref}
+              variant="whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("heroWhatsapp")}
+              className="h-12 px-7"
+            >
+              {t("heroWhatsapp")}
+            </Button>
+          </div>
+        </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-[var(--color-surface)]" id="services" containerClassName="max-w-7xl">
+      <SectionContainer className="bg-white" id="services" containerClassName="max-w-7xl">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl md:text-3xl">{t("servicesTitle")}</h2>
           <Link href="/services" className="text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-gold)]">
             {t("services.more")}
           </Link>
         </div>
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title}>
+            <article
+              key={service.title}
+              className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
               <h3 className="text-lg">{service.title}</h3>
-              <p className="mt-3 max-w-prose text-sm leading-7">{service.description}</p>
-              <Button
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="whatsapp"
-                className="mt-6 h-10 px-4 text-xs"
-              >
-                {t("services.bookNow")}
-              </Button>
-            </Card>
+              <p className="mt-3 max-w-prose text-sm leading-7 text-[var(--color-muted)]">{service.description}</p>
+            </article>
           ))}
         </div>
       </SectionContainer>
 
-      <SectionContainer className="dark-section" id="fleet" containerClassName="max-w-7xl">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="text-2xl text-white md:text-3xl">{t("fleetTitle")}</h2>
-          <Link href="/fleet" className="text-sm font-semibold text-[var(--color-gold)] hover:text-[#e4cf95]">
-            {t("fleet.more")}
-          </Link>
-        </div>
-        <p className="mt-3 max-w-prose text-sm leading-7 text-white/90">{t("fleet.darkSectionIntro")}</p>
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {fleet.map((item, index) => (
+      <SectionContainer className="bg-[#0f0f0f]" id="why" containerClassName="max-w-7xl">
+        <h2 className="text-2xl text-white md:text-3xl">{t("whyChoose.title")}</h2>
+        <p className="mt-4 max-w-prose leading-7 text-gray-300">{t("whyChoose.intro")}</p>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {whyChooseFeatures.map((feature) => (
             <article
-              key={item.title}
-              className="overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-0 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--color-gold)]"
+              key={feature}
+              className="rounded-2xl border border-white/15 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-gold)]"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-2xl">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  priority={index < 2}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg text-white">{item.title}</h3>
-                <p className="mt-3 max-w-prose text-sm leading-7 text-white/90">{item.description}</p>
-                <Button
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="gold"
-                  className="mt-6 h-10 px-4 text-xs"
-                >
-                  {t("fleet.bookVehicle")}
-                </Button>
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                    <path d="M9.55 18 4 12.45l1.4-1.4 4.15 4.15 9.05-9.05 1.4 1.4z" />
+                  </svg>
+                </span>
+                <h3 className="text-base font-semibold text-white">{feature}</h3>
               </div>
             </article>
           ))}
         </div>
       </SectionContainer>
 
-      <SectionContainer className="bg-white" id="why" containerClassName="max-w-7xl">
-        <h2 className="text-2xl md:text-3xl">{t("whyTitle")}</h2>
-        <p className="mt-4 max-w-prose leading-7">{t("whyParagraph")}</p>
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Card className="shadow-none">
-            <h3 className="text-base">{t("whyBullets.one")}</h3>
-            <p className="mt-2 text-sm leading-7">{t("whyCards.one")}</p>
-          </Card>
-          <Card className="shadow-none">
-            <h3 className="text-base">{t("whyBullets.two")}</h3>
-            <p className="mt-2 text-sm leading-7">{t("whyCards.two")}</p>
-          </Card>
-          <Card className="shadow-none">
-            <h3 className="text-base">{t("whyBullets.three")}</h3>
-            <p className="mt-2 text-sm leading-7">{t("whyCards.three")}</p>
-          </Card>
-          <Card className="shadow-none">
-            <h3 className="text-base">{t("whyBullets.four")}</h3>
-            <p className="mt-2 text-sm leading-7">{t("whyCards.four")}</p>
-          </Card>
+      <SectionContainer className="bg-[var(--color-surface)]" id="fleet" containerClassName="max-w-7xl">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="text-2xl md:text-3xl">{t("fleetTitle")}</h2>
+            <p className="mt-3 max-w-prose text-sm leading-7 text-[var(--color-muted)]">{t("fleetIntro")}</p>
+          </div>
+          <Link href="/fleet" className="text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-gold)]">
+            {t("fleet.more")}
+          </Link>
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {fleetCards.map((item, index) => (
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.title}
+                  fill
+                  priority={index < 2}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-base">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{item.description}</p>
+                <Link
+                  href={item.href}
+                  className="mt-4 inline-flex text-sm font-semibold text-[var(--color-navy)] underline-offset-4 hover:text-[var(--color-gold)] hover:underline"
+                >
+                  {t("fleet.viewVehicle")}
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </SectionContainer>
 
-      <SectionContainer className="dark-section" id="contact" containerClassName="max-w-5xl text-center">
-        <h2 className="text-2xl md:text-3xl">{t("finalTitle")}</h2>
-        <p className="mx-auto mt-4 max-w-prose leading-7">{t("finalSupport")}</p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
+        <h2 className="text-2xl md:text-3xl">{t("howItWorks.title")}</h2>
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {howItWorksSteps.map((step) => (
+            <article
+              key={step.title}
+              className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              <Image src={step.iconSrc} alt="" width={40} height={40} aria-hidden="true" />
+              <h3 className="mt-4 text-base">{step.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">{step.description}</p>
+            </article>
+          ))}
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="bg-[var(--color-surface)]" containerClassName="max-w-7xl">
+        <h2 className="text-center text-2xl md:text-3xl">{t("coreValues.title")}</h2>
+        <div className="relative mx-auto mt-10 hidden h-[30rem] w-[30rem] md:block">
+          <div className="absolute inset-16 rounded-full border border-[var(--color-border)]" />
+          <div className="absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--color-gold)] bg-white px-4 text-center text-sm font-semibold text-[var(--color-ink)]">
+            {t("coreValues.center")}
+          </div>
+          {coreValues.map((value, index) => (
+            <div
+              key={value}
+              className={`absolute flex h-24 w-24 items-center justify-center rounded-full border border-[var(--color-border)] bg-white px-3 text-center text-xs font-semibold text-[var(--color-ink)] shadow-sm ${valuePositions[index]}`}
+            >
+              {value}
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-3 md:hidden">
+          {coreValues.map((value) => (
+            <div key={value} className="rounded-xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-medium">
+              {value}
+            </div>
+          ))}
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="bg-white" containerClassName="max-w-7xl">
+        <h2 className="text-2xl md:text-3xl">{t("serviceAreas.title")}</h2>
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {serviceAreas.map((area) => (
+            <p key={area} className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm">
+              {area}
+            </p>
+          ))}
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="bg-[#0f0f0f]" id="contact" containerClassName="max-w-5xl text-center">
+        <h2 className="text-2xl text-white md:text-3xl">{t("closing.title")}</h2>
+        <p className="mx-auto mt-4 max-w-prose leading-7 text-gray-300">{t("closing.paragraph")}</p>
+        <div className="mt-8 flex justify-center">
           <Button href={whatsappHref} variant="whatsapp" target="_blank" rel="noopener noreferrer" className="h-12 px-8">
-            {t("finalButton")}
-          </Button>
-          <Button href="tel:+34617629115" variant="secondary" className="h-12 px-8">
-            {t("heroCall")}
+            {t("closing.cta")}
           </Button>
         </div>
       </SectionContainer>
