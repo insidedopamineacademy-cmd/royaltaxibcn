@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "title": "Royal Taxi Barcelona",
+    "description": "Premium Barcelona taxi service for airport transfers, city rides and executive travel."
+  },
+  "header": {
+    "services": "Services",
+    "fleet": "Fleet",
+    "quote": "Get a Quote",
+    "why": "Why Us",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "footer": {
+    "copyright": "© {year} Royal Taxi Barcelona. All rights reserved.",
+    "call": "Call +34 617 629 115",
+    "whatsapp": "WhatsApp +34 617 629 115"
+  },
+  "cta": {
+    "call": "Call",
+    "whatsapp": "WhatsApp"
+  },
+  "home": {
+    "metaTitle": "Premium Taxi Service in Barcelona",
+    "metaDescription": "Private, airport and city transfers in Barcelona with premium service and fast WhatsApp response.",
+    "heroTitle": "Premium Taxi Service in Barcelona – Airport & City Transfers",
+    "heroSubtitle": "Reliable private transfers, airport pickups and city rides with punctual, licensed drivers.",
+    "heroWhatsapp": "Book on WhatsApp",
+    "heroCall": "Call Now",
+    "trustBadges": {
+      "always": "24/7 Available",
+      "meet": "Meet & Greet",
+      "licensed": "Licensed Drivers",
+      "fast": "Fast WhatsApp Response"
+    },
+    "servicesTitle": "Services Overview",
+    "services": {
+      "airportTitle": "Airport Taxi",
+      "airportDesc": "Smooth transfers to and from Barcelona Airport with flight-aware pickup timing.",
+      "cityTitle": "City Taxi",
+      "cityDesc": "Comfortable rides across Barcelona for business meetings, hotels and restaurants.",
+      "longTitle": "Long Distance Taxi",
+      "longDesc": "Private intercity travel from Barcelona with premium comfort and direct routing.",
+      "whatsapp": "Ask on WhatsApp",
+      "more": "View services"
+    },
+    "fleetTitle": "Fleet Overview",
+    "fleet": {
+      "standardTitle": "Standard Taxi (4 pax)",
+      "standardDesc": "Ideal for daily trips, airport transfers and short business routes.",
+      "premiumTitle": "Premium Taxi (Mercedes)",
+      "premiumDesc": "Executive comfort for corporate transfers and premium city travel.",
+      "vanTitle": "Van Taxi (8 pax)",
+      "vanDesc": "Group-friendly transport for families, events and luggage-heavy rides.",
+      "whatsapp": "Request vehicle",
+      "more": "View fleet"
+    },
+    "whyTitle": "Why Choose Royal Taxi Barcelona",
+    "whyParagraph": "We focus on punctuality, comfort and direct communication so your transfer is effortless from the first message.",
+    "whyBullets": {
+      "one": "Professional licensed drivers",
+      "two": "Premium clean vehicles",
+      "three": "Fast direct WhatsApp support",
+      "four": "Reliable service for airport and city rides"
+    },
+    "finalTitle": "Need a Premium Taxi in Barcelona?",
+    "finalSupport": "Fast WhatsApp response. Professional drivers. No hidden costs.",
+    "finalButton": "Start on WhatsApp"
+  },
+  "servicesPage": {
+    "metaTitle": "Taxi Services in Barcelona",
+    "metaDescription": "Airport, cruise port, city, long-distance and business taxi services in Barcelona.",
+    "title": "Taxi Services",
+    "intro": "Choose your transfer type and get quick confirmation by WhatsApp or phone.",
+    "items": {
+      "airportTitle": "Airport Taxi",
+      "airportDesc": "On-time transfers between Barcelona city and airport terminals.",
+      "cruiseTitle": "Cruise Port Taxi",
+      "cruiseDesc": "Direct rides to and from Barcelona cruise terminals with luggage assistance.",
+      "cityTitle": "City Taxi",
+      "cityDesc": "Fast and comfortable urban mobility for leisure and business needs.",
+      "longTitle": "Long Distance Taxi",
+      "longDesc": "Private long-distance travel from Barcelona with fixed routing and comfort.",
+      "businessTitle": "Business Taxi",
+      "businessDesc": "Professional executive transport for meetings, events and corporate guests."
+    },
+    "whatsapp": "WhatsApp",
+    "call": "Call"
+  },
+  "fleetPage": {
+    "metaTitle": "Taxi Fleet",
+    "metaDescription": "Standard, premium Mercedes and 8-passenger van taxi options in Barcelona.",
+    "title": "Our Fleet",
+    "intro": "Select the right vehicle class for your trip profile, comfort level and passenger needs.",
+    "cards": {
+      "standardTitle": "Standard Taxi",
+      "standardCapacity": "Capacity: up to 4 passengers",
+      "standardDesc": "Balanced comfort and reliability for city transfers and airport routes.",
+      "premiumTitle": "Premium Taxi (Mercedes)",
+      "premiumCapacity": "Capacity: up to 4 passengers",
+      "premiumDesc": "Refined executive experience for business travel and premium journeys.",
+      "vanTitle": "Van Taxi",
+      "vanCapacity": "Capacity: up to 8 passengers",
+      "vanDesc": "Spacious solution for groups, families and transfers with extra luggage."
+    },
+    "whatsapp": "Request on WhatsApp"
+  },
+  "privateTransfersPage": {
+    "metaTitle": "Private Transfers",
+    "metaDescription": "Executive private chauffeur transfers in Barcelona with discreet, punctual service.",
+    "title": "Private Transfers",
+    "intro": "A discreet chauffeur-style service designed for executives, VIP guests and travelers who value precision.",
+    "paragraph1": "From airport arrivals to hotel and meeting transfers, every route is planned for efficiency and calm travel.",
+    "paragraph2": "Your driver arrives prepared, your vehicle is presented to premium standards and communication stays direct from booking to drop-off.",
+    "cta": "Arrange Private Transfer on WhatsApp"
+  },
+  "quotePage": {
+    "metaTitle": "Get a Taxi Quote in Barcelona",
+    "metaDescription": "Request a quick quote for your Barcelona taxi ride. We reply via WhatsApp or phone.",
+    "title": "Get a Taxi Quote",
+    "intro": "Tell us your transfer details and we will reply quickly with the best option for your trip.",
+    "reassurance": "Available 24/7 on WhatsApp and phone for urgent requests.",
+    "whatsapp": "WhatsApp",
+    "callNow": "Call Now",
+    "successTitle": "We will contact you shortly via WhatsApp or phone.",
+    "successNote": "If your transfer is urgent, contact us directly now.",
+    "form": {
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "pickup": "Pickup location",
+      "dropoff": "Drop-off location",
+      "date": "Date",
+      "time": "Time",
+      "passengers": "Passengers",
+      "message": "Additional details",
+      "namePlaceholder": "John Smith",
+      "phonePlaceholder": "+34 600 000 000",
+      "emailPlaceholder": "name@email.com",
+      "pickupPlaceholder": "Barcelona Airport T1",
+      "dropoffPlaceholder": "Hotel in Barcelona",
+      "datePlaceholder": "Select date",
+      "timePlaceholder": "Select time",
+      "passengersPlaceholder": "e.g. 4",
+      "messagePlaceholder": "Flight number, luggage details or special requests",
+      "recommended": "Date and time are optional but recommended.",
+      "submit": "Request Quote",
+      "submitting": "Sending...",
+      "errorSummaryTitle": "Please correct the following fields:",
+      "requiredName": "Name is required.",
+      "requiredPhone": "Phone is required.",
+      "requiredEmail": "Email is required.",
+      "requiredPickup": "Pickup location is required.",
+      "requiredDropoff": "Drop-off location is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "errorGeneric": "Something went wrong. Please try again."
+    }
+  }
+}
