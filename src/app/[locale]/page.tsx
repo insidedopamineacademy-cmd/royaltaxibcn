@@ -41,17 +41,17 @@ export default async function HomePage({params}: PageProps) {
     {
       title: t("fleet.standardTitle"),
       description: t("fleet.standardDesc"),
-      image: "/fleet-standard.svg",
+      image: "/images/taxi-barcelona-prius-plus.webp",
     },
     {
       title: t("fleet.premiumTitle"),
       description: t("fleet.premiumDesc"),
-      image: "/fleet-premium.svg",
+      image: "/images/taxi-class-barcelona-mercedes.webp",
     },
     {
       title: t("fleet.vanTitle"),
       description: t("fleet.vanDesc"),
-      image: "/fleet-van.svg",
+      image: "/images/taxi-van-barcelona.webp",
     },
   ];
 
