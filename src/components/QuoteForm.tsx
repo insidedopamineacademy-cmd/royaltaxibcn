@@ -130,10 +130,10 @@ export function QuoteForm({locale}: QuoteFormProps) {
           <p className="mt-3 text-[var(--color-muted)]">{t("successNote")}</p>
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button href={whatsappHref} target="_blank" rel="noopener noreferrer">
+          <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="whatsapp">
             {t("whatsapp")}
           </Button>
-          <Button href="tel:+34617629115" variant="outline">
+          <Button href="tel:+34617629115" variant="secondary">
             {t("callNow")}
           </Button>
         </div>
@@ -145,7 +145,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
     <form onSubmit={handleSubmit} noValidate className="rounded-3xl border border-[var(--color-border)] bg-white p-6 sm:p-10">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("name")}
           </label>
           <input
@@ -161,7 +161,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("phone")}
           </label>
           <input
@@ -177,7 +177,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("email")}
           </label>
           <input
@@ -193,7 +193,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div>
-          <label htmlFor="passengers" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="passengers" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("passengers")}
           </label>
           <input
@@ -209,7 +209,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="pickup" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="pickup" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("pickup")}
           </label>
           <input
@@ -225,7 +225,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="dropoff" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="dropoff" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("dropoff")}
           </label>
           <input
@@ -241,7 +241,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div>
-          <label htmlFor="date" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="date" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("date")}
           </label>
           <input
@@ -255,7 +255,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div>
-          <label htmlFor="time" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="time" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("time")}
           </label>
           <input
@@ -269,7 +269,7 @@ export function QuoteForm({locale}: QuoteFormProps) {
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-[var(--color-ink)]">
+          <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-[var(--color-navy)]">
             {formT("message")}
           </label>
           <textarea

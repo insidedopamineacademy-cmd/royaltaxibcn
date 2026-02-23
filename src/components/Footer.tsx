@@ -19,14 +19,14 @@ export function Footer() {
           })}
         </p>
         <div className="flex flex-wrap items-center gap-4">
-          <a href="tel:+34617629115" className="transition hover:text-[var(--color-ink)]">
+          <a href="tel:+34617629115" className="transition hover:text-[var(--color-navy)]">
             {t("call")}
           </a>
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-[var(--color-ink)]"
+            className="transition hover:text-[var(--color-navy)]"
           >
             {t("whatsapp")}
           </a>
