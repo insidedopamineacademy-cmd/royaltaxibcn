@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Manrope, Playfair_Display } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -7,10 +8,15 @@ import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/FloatingContactButtons";
 import { Header } from "@/components/Header";
 import { routing } from "@/i18n/routing";
-import { GoogleTagManager } from "@next/third-parties/google";
 import "../globals.css";
 
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
+const sans = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 const serif = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -24,7 +30,12 @@ export const metadata: Metadata = {
   },
   description:
     "Premium Barcelona taxi service for airport transfers, city rides and executive travel.",
-  alternates: { languages: { en: "/en", es: "/es" } },
+  alternates: {
+    languages: {
+      en: "/en",
+      es: "/es",
+    },
+  },
 };
 
 export function generateStaticParams() {
@@ -40,17 +51,42 @@ export default async function LocaleLayout({
 }>) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) notFound();
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID; // may be undefined in prod if not set
-
   return (
     <html lang={locale} className={`${sans.variable} ${serif.variable}`}>
+      <head>
+        {/* Google Tag Manager */}
+        {GTM_ID ? (
+          <Script id="gtm-loader" strategy="afterInteractive">
+            {`
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `}
+          </Script>
+        ) : null}
+      </head>
+
       <body className="bg-[var(--color-surface)] text-[var(--color-ink)] antialiased">
-        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+        {/* Google Tag Manager (noscript) */}
+        {GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
 
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
