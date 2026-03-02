@@ -10,11 +10,7 @@ import { routing } from "@/i18n/routing";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "../globals.css";
 
-const sans = Manrope({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
+const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 const serif = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -28,12 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "Premium Barcelona taxi service for airport transfers, city rides and executive travel.",
-  alternates: {
-    languages: {
-      en: "/en",
-      es: "/es",
-    },
-  },
+  alternates: { languages: { en: "/en", es: "/es" } },
 };
 
 export function generateStaticParams() {
@@ -49,18 +40,18 @@ export default async function LocaleLayout({
 }>) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+  if (!hasLocale(routing.locales, locale)) notFound();
 
   setRequestLocale(locale);
   const messages = await getMessages();
 
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID; // may be undefined in prod if not set
+
   return (
     <html lang={locale} className={`${sans.variable} ${serif.variable}`}>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
-
       <body className="bg-[var(--color-surface)] text-[var(--color-ink)] antialiased">
+        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
             <Header />
