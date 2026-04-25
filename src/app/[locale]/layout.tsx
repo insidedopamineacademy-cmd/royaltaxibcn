@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { FloatingContactButtons } from "@/components/FloatingContactButtons";
-import { GTM } from "@/components/GTM";
 import { Header } from "@/components/Header";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -60,7 +60,23 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${sans.variable} ${serif.variable}`}>
       <head />
       <body className="bg-[var(--color-surface)] text-[var(--color-ink)] antialiased">
-        <GTM />
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N9QTR7FV');
+          `}
+        </Script>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N9QTR7FV"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="flex min-h-screen flex-col">
             <Header />
